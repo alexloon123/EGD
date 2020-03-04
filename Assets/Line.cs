@@ -5,8 +5,8 @@ using UnityEngine;
 public class Line : MonoBehaviour
 {
 
-    Vertex A;
-    Vertex B;
+    public Vertex A;
+    public Vertex B;
 
     // Update is called once per frame
     public void Setup(Vertex a, Vertex b, float l_curve)
@@ -14,6 +14,9 @@ public class Line : MonoBehaviour
         //Setup vertex references
         A = a;
         B = b;
+        //Setup vertex connections
+        a.AddConnection(b, this);
+        b.AddConnection(a, this);
         //Step value 0<s<1 determines how many points are interpolated for each curve
         double s = 0.1;
         //Total number of points to be interpolated
@@ -58,16 +61,12 @@ public class Line : MonoBehaviour
             }
         }
 
+        //Create mesh
         Mesh mesh = GetComponent<MeshFilter>().mesh;
         mesh.Clear();
         mesh.vertices = mesh_points;
         mesh.triangles = triangles;
         GetComponent<MeshCollider>().sharedMesh = mesh;
-        //Render the line
-        /*
-        GetComponent<LineRenderer>().positionCount = n;
-        GetComponent<LineRenderer>().SetPositions(line_points);
-        */
     }
 
     //Given a list of input vectors, interpolates curves based on step and returns array of all generated points
@@ -129,5 +128,12 @@ public class Line : MonoBehaviour
             output[i] = temp[i];
         }
         return output;
+    }
+
+    float DistanceToLine(Vector3 pos) {
+        //Find closest point
+        Vector3 temp = GetComponent<MeshCollider>().ClosestPointOnBounds(pos);
+        //Return distance between
+        return Vector3.Distance(pos, temp);
     }
 }

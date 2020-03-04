@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
+    //Prefabs
     [SerializeField] GameObject PREFAB_vertex;
     [SerializeField] GameObject PREFAB_line;
+    //Vertex Positions
     [SerializeField] Vector2[] positions;
+    //Vertex Path
     [SerializeField] List<int> path;
 
+    //Z-position of lines and verts
     public float z_depth;
+    //Maximum distance between connected verts
     public float l_range;
+    //Chance of verts within range being connected
     public float l_chance;
+    //Maximum curvature
     public float l_curve;
 
+    //Verts
     Vertex[] vertices;
+    //Lines
     Line[] lines;
-    List<int>[] adjacency;
 
     // Start is called before the first frame update
     void Start() {
