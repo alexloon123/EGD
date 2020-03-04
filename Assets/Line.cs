@@ -32,52 +32,63 @@ public class Line : MonoBehaviour
             ((a.transform.position.x + b.transform.position.x) / 2) + Random.Range(-l_curve, l_curve), 
             ((a.transform.position.y + b.transform.position.y) / 2) + Random.Range(-l_curve, l_curve));
         //Generate Line Points
-        Vector3[] line_points = GenerateLinePoints(p_a, p_b, p_c, s, n);
+        List<Vector3> line_points = GenerateLinePoints(p_a, p_b, p_c, s, n);
         //Generate Mesh Points
-        Vector3[] mesh_points = GenerateMeshPoints(line_points, .01f);
+        (List<Vector3>,List<Vector3>) mesh_points = GenerateMeshPoints(line_points, .01f);
+        List<Vector3> left = mesh_points.Item1;
+        List<Vector3> right = mesh_points.Item2;
 
         //Compute triangles
         int[] triangles = new int[t*3];
         int c = 0;
-        for(int i = 0; i < mesh_points.Length; i += 3) {
+        for(int i = 0; i < n; i ++) {
             //IF NOT LAST POINT
-            if(i < mesh_points.Length - 1) {
+            if(i < n - 1) {
                 triangles[c] = i;c++;
+                triangles[c] = i+n; c++;
                 triangles[c] = i+1; c++;
-                triangles[c] = i+3; c++;
                 triangles[c] = i; c++;
-                triangles[c] = i + 3; c++;
-                triangles[c] = i + 2; c++;
-
+                triangles[c] = i+1; c++;
+                triangles[c] = i+(2*n)-1; c++;
             }
             //IF MIDDLE POINT
-            if(i != 0 && i < mesh_points.Length - 1) {
+            if(i != 0 && i < n - 1) {
                 triangles[c] = i; c++;
-                triangles[c] = i + 2; c++;
-                triangles[c] = i - 1; c++;
+                triangles[c] = i-1+n; c++;
+                triangles[c] = i+n; c++;
                 triangles[c] = i; c++;
-                triangles[c] = i - 2; c++;
-                triangles[c] = i + 1; c++;
+                triangles[c] = i+(2*n)-1; c++;
+                triangles[c] = i+(2*n)-2; c++;
             }
+        }
+
+        //Create final vert array
+        Vector3[] all_verts = new Vector3[(3 * n) - 2];
+        for(int i = 0; i < n; i++) {
+            all_verts[i] = line_points[i];
+        }
+        for (int i = 0; i < n-1; i++) {
+            all_verts[i+n] = left[i];
+        }
+        for (int i = 0; i < n-1; i++) {
+            all_verts[i+(2*n)-1] = right[i];
         }
 
         //Create mesh
         Mesh mesh = GetComponent<MeshFilter>().mesh;
         mesh.Clear();
-        mesh.vertices = mesh_points;
+        mesh.vertices = all_verts;
         mesh.triangles = triangles;
         GetComponent<MeshCollider>().sharedMesh = mesh;
     }
 
     //Given a list of input vectors, interpolates curves based on step and returns array of all generated points
-    Vector3[] GenerateLinePoints(Vector2 A, Vector2 B, Vector2 C, double step, int n) {
+    List<Vector3> GenerateLinePoints(Vector2 A, Vector2 B, Vector2 C, double step, int n) {
         //Storage of points between AB and BC
         Vector2 AB = new Vector2();
         Vector2 BC = new Vector2();
-        //Current index in output
-        int i = 0;
         //Setup output
-        Vector3[] output = new Vector3[n];
+        List<Vector3> output = new List<Vector3>();
         //Interpolate 3 points
         for (double t = 0; t <= 1; t = t + step) {
             //Calc point on line A-->B
@@ -87,22 +98,21 @@ public class Line : MonoBehaviour
             BC.x = (float)((1 - t) * B.x + (t) * C.x);
             BC.y = (float)((1 - t) * B.y + (t) * C.y);
             //Calc point on line AB-->BC
-            output[i] = new Vector3(0, 0, 0);
-            output[i].x = (float)((1 - t) * AB.x + (t) * BC.x);
-            output[i].y = (float)((1 - t) * AB.y + (t) * BC.y);
-            //Move to next index in output
-            i++;
+            output.Add(new Vector3(
+                (float)((1 - t) * AB.x + (t) * BC.x), 
+                (float)((1 - t) * AB.y + (t) * BC.y), 0));
         }
         return output;
     }
 
-    Vector3[] GenerateMeshPoints(Vector3[] points, float width) {
-        int m = points.Length;//Points on curve
+    (List<Vector3>,List<Vector3>) GenerateMeshPoints(List<Vector3> points, float width) {
+        int m = points.Count;//Points on curve
         int n = (m - 1) * 2;  //Additional points to add
 
-        List<Vector3> temp = new List<Vector3>();
+        List<Vector3> left = new List<Vector3>();
+        List<Vector3> right = new List<Vector3>();
         //For each pair of points i and i+1, generate two points that are equidistant and width away from the closest points between them
-        for(int i = 0; i < m - 1; i++) {
+        for (int i = 0; i < m - 1; i++) {
             //Calculate slope perpendicular to line between points
             float slope = (points[i].y - points[i + 1].y) / (points[i].x - points[i + 1].x);
             slope = -1 / slope;
@@ -112,22 +122,23 @@ public class Line : MonoBehaviour
             float angle = Mathf.Atan(slope);
             float x = width * Mathf.Cos(angle);
             float y = width * Mathf.Sin(angle);
+
             //Calculate two new points
             Vector3 p1 = new Vector3(midpoint.x + x, midpoint.y + y,0);
             Vector3 p2 = new Vector3(midpoint.x - x, midpoint.y - y,0);
-            //Add line point and next two offline points
-            temp.Add(points[i]);
-            temp.Add(p1);
-            temp.Add(p2);
+
+            //Are the points on (left and right) or (right and left) sides of the line
+            float d1 = ((p1.x - points[i].x) * (points[i + 1].y - points[i].y)) - ((p1.y - points[i].y) * (points[i + 1].x - points[i].x));
+            if(d1 > 0) {
+                left.Add(p1);
+                right.Add(p2);
+            } else {
+                left.Add(p2);
+                right.Add(p1);
+            }
+            
         }
-        //Add last point
-        temp.Add(points[m-1]);
-        //Convert to array
-        Vector3[] output = new Vector3[m + n];
-        for(int i = 0; i < m + n; i++) {
-            output[i] = temp[i];
-        }
-        return output;
+        return (left,right);
     }
 
     float DistanceToLine(Vector3 pos) {
