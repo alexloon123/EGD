@@ -7,6 +7,13 @@ public class Map : MonoBehaviour
     [SerializeField] GameObject PREFAB_vertex;
     [SerializeField] GameObject PREFAB_line;
     [SerializeField] Vector2[] positions;
+    [SerializeField] List<int> path;
+
+    public float z_depth;
+    public float l_range;
+    public float l_chance;
+    public float l_curve;
+
     Vertex[] vertices;
     Line[] lines;
     List<int>[] adjacency;
@@ -17,12 +24,16 @@ public class Map : MonoBehaviour
         vertices = new Vertex[positions.Length];
         //Create vertex[i] at position[i]
         for (int i = 0; i < positions.Length; i++) {
-            vertices[i] = Instantiate(PREFAB_vertex, new Vector3(positions[i].x, positions[i].y, 2.5f), Quaternion.identity).GetComponent<Vertex>();
+            vertices[i] = Instantiate(PREFAB_vertex, new Vector3(positions[i].x, positions[i].y, z_depth), Quaternion.identity).GetComponent<Vertex>();
+            if (path.Contains(i)) {//Enable vertex collider
+                vertices[i].GetComponent<SphereCollider>().enabled = true;
+                vertices[i].GetComponent<Vertex>().OnPath = true;
+            }
         }
         //Initialize adjacency array
         bool[,] adjacency = new bool[positions.Length, positions.Length];
         //Adjacency range
-        float _range = .75f;
+        
         //Record edges to be created
         List<(Vertex, Vertex)> edges = new List<(Vertex, Vertex)>();
         //Set vertex[i] adjacent to all vertecies within a distance of _range
@@ -32,7 +43,7 @@ public class Map : MonoBehaviour
                 if (Mathf.Sqrt(
                     Mathf.Pow(Mathf.Abs(positions[i].x - positions[j].x), 2) +
                     Mathf.Pow(Mathf.Abs(positions[i].y - positions[j].y), 2)
-                ) <= _range) {
+                ) <= l_range && Random.Range(0,1)<l_chance) {
                     edges.Add((vertices[i], vertices[j]));
                 }
             }
@@ -41,9 +52,12 @@ public class Map : MonoBehaviour
         lines = new Line[edges.Count];
         //Create lines
         for (int i = 0; i < edges.Count; i++) {
-            lines[i] = Instantiate(PREFAB_line, new Vector3(0, 0, 2.5f), Quaternion.identity).GetComponent<Line>();
-            lines[i].Setup(edges[i].Item1, edges[i].Item2);
-            print("Line[" + i + "] had verts (" + edges[i].Item1.GetPosition() + "),(" + edges[i].Item2.GetPosition() + ")");
+            lines[i] = Instantiate(PREFAB_line, new Vector3(0, 0, z_depth), Quaternion.identity).GetComponent<Line>();
+            lines[i].Setup(edges[i].Item1, edges[i].Item2, l_curve);
+            if(edges[i].Item1.OnPath && edges[i].Item2.OnPath) {
+                lines[i].GetComponent<MeshCollider>().enabled = true;
+            }
+            //print("Line[" + i + "] had verts (" + edges[i].Item1.GetPosition() + "),(" + edges[i].Item2.GetPosition() + ")");
         }
     }
 
