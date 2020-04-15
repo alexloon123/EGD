@@ -64,6 +64,12 @@ public class Conductor : MonoBehaviour
             completedLoops++;
             loopPositionInBeats = 0;
         }
+        loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
+        loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
+        if (currentLeftBeat < numberOfBeatsLeftChannel && leftBeatsBeatStamps[currentLeftBeat] + errorMargin <= loopPositionInBeats)
+        {
+            currentLeftBeat++;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
@@ -93,12 +99,7 @@ public class Conductor : MonoBehaviour
                 currentRightBeat++;
             }
         }
-        loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
-        loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
-        if (currentLeftBeat < numberOfBeatsLeftChannel - 1 && leftBeatsBeatStamps[currentLeftBeat + 1] <= loopPositionInBeats)
-        {
-            currentLeftBeat++;
-        }
+        
     }
 
 
