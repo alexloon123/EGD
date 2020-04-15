@@ -95,7 +95,7 @@ public class Conductor : MonoBehaviour
         }
         loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
-        if (currentLeftBeat < numberOfBeatsLeftChannel && leftBeatsBeatStamps[currentLeftBeat] <= loopPositionInBeats)
+        if (currentLeftBeat < numberOfBeatsLeftChannel - 1 && leftBeatsBeatStamps[currentLeftBeat + 1] <= loopPositionInBeats)
         {
             currentLeftBeat++;
         }
