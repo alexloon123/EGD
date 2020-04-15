@@ -21,6 +21,23 @@ public class Conductor : MonoBehaviour
     public float loopPositionInAnalog;
     public static Conductor instance;
 
+    public int numberOfBeatsLeftChannel;
+    public int numberOfBeatsRightChannel;
+
+    public float[] leftBeatsBeatStamps;
+    public float[] rightBeatsBeatStamps;
+
+    public float errorMargin;
+
+    public int currentLeftBeat;
+    public int currentRightBeat;
+
+    public bool left = true;
+    public bool right = false;
+    public bool pressed = false;
+
+    public GameObject cubeMarker;
+
     void Awake()
     {
         instance = this;
@@ -42,9 +59,47 @@ public class Conductor : MonoBehaviour
         songPositionInBeats = songPosition / secondsPerBeat;
         if (songPositionInBeats >= (completedLoops + 1) * beatsPerLoop)
         {
+            currentLeftBeat = 0;
+            currentRightBeat = 0;
             completedLoops++;
+            loopPositionInBeats = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            if (left)
+            {
+                if (currentLeftBeat >= numberOfBeatsLeftChannel)
+                {
+
+                }
+                else
+                {
+                    float beat = Mathf.Abs(loopPositionInBeats - leftBeatsBeatStamps[currentLeftBeat]);
+                    Debug.Log("Space was pressed with the beat: " + beat + ". The currentLeftBeat is: " + currentLeftBeat + " and the loopPos was: " + loopPositionInBeats + " and the left beat stamp was: " + leftBeatsBeatStamps[currentLeftBeat]);
+                    if (beat <= errorMargin)
+                    {
+                        cubeMarker.transform.position = new Vector3(5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                    }
+                    else
+                    {
+                        cubeMarker.transform.position = new Vector3(-5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                    }
+                }
+
+            }
+            else if (right)
+            {
+                currentRightBeat++;
+            }
         }
         loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
+        if (currentLeftBeat < numberOfBeatsLeftChannel && leftBeatsBeatStamps[currentLeftBeat] <= loopPositionInBeats)
+        {
+            currentLeftBeat++;
+        }
     }
+
+
 }
