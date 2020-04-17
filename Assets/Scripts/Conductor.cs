@@ -27,7 +27,7 @@ public class Conductor : MonoBehaviour
     public float[] leftBeatsBeatStamps;
     public float[] rightBeatsBeatStamps;
 
-    public float errorMargin;
+    public float beatErrorMargin;
 
     public int currentLeftBeat;
     public int currentRightBeat;
@@ -66,9 +66,14 @@ public class Conductor : MonoBehaviour
         }
         loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
-        if (currentLeftBeat < numberOfBeatsLeftChannel && leftBeatsBeatStamps[currentLeftBeat] + errorMargin <= loopPositionInBeats)
+        if (currentLeftBeat + 1 < numberOfBeatsLeftChannel && leftBeatsBeatStamps[currentLeftBeat + 1] - beatErrorMargin <= loopPositionInBeats)
         {
             currentLeftBeat++;
+        }
+
+        if (currentRightBeat + 1 < numberOfBeatsRightChannel && rightBeatsBeatStamps[currentRightBeat + 1] - beatErrorMargin <= loopPositionInBeats)
+        {
+            currentRightBeat++;
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -83,7 +88,7 @@ public class Conductor : MonoBehaviour
                 {
                     float beat = Mathf.Abs(loopPositionInBeats - leftBeatsBeatStamps[currentLeftBeat]);
                     Debug.Log("Space was pressed with the beat: " + beat + ". The currentLeftBeat is: " + currentLeftBeat + " and the loopPos was: " + loopPositionInBeats + " and the left beat stamp was: " + leftBeatsBeatStamps[currentLeftBeat]);
-                    if (beat <= errorMargin)
+                    if (beat <= beatErrorMargin)
                     {
                         cubeMarker.transform.position = new Vector3(5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
                     }
@@ -96,7 +101,23 @@ public class Conductor : MonoBehaviour
             }
             else if (right)
             {
-                currentRightBeat++;
+                if (currentRightBeat >= numberOfBeatsRightChannel)
+                {
+
+                }
+                else
+                {
+                    float beat = Mathf.Abs(loopPositionInBeats - rightBeatsBeatStamps[currentRightBeat]);
+                    Debug.Log("Space was pressed with the beat: " + beat + ". The currentLeftBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the left beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
+                    if (beat <= beatErrorMargin)
+                    {
+                        cubeMarker.transform.position = new Vector3(5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                    }
+                    else
+                    {
+                        cubeMarker.transform.position = new Vector3(-5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                    }
+                }
             }
         }
         
