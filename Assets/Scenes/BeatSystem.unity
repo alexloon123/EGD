@@ -382,8 +382,8 @@ MonoBehaviour:
   beatErrorMargin: 0.25
   currentLeftBeat: 0
   currentRightBeat: 0
-  left: 1
-  right: 0
+  left: 0
+  right: 1
   pressed: 0
   cubeMarker: {fileID: 428178842}
 --- !u!4 &352312485
