@@ -62,7 +62,6 @@ public class Conductor : MonoBehaviour
             currentLeftBeat = 0;
             currentRightBeat = 0;
             completedLoops++;
-            loopPositionInBeats = 0;
         }
         loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
@@ -108,7 +107,7 @@ public class Conductor : MonoBehaviour
                 else
                 {
                     float beat = Mathf.Abs(loopPositionInBeats - rightBeatsBeatStamps[currentRightBeat]);
-                    Debug.Log("Space was pressed with the beat: " + beat + ". The currentLeftBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the left beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
+                    Debug.Log("Space was pressed with the beat: " + beat + ". The currentRighttBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the right beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
                     if (beat <= beatErrorMargin)
                     {
                         cubeMarker.transform.position = new Vector3(5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
