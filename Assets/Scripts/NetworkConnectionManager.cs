@@ -9,6 +9,7 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
 {
     public GameObject button_master;
     public GameObject button_room;
+    public GameObject text_nickname;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,9 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
 
     public void ConnectToMaster() {
         PhotonNetwork.OfflineMode = false;
-        PhotonNetwork.NickName = "guest";
+        PhotonNetwork.NickName = text_nickname.GetComponent<UnityEngine.UI.Text>().text;
         PhotonNetwork.AutomaticallySyncScene = true;
-        PhotonNetwork.GameVersion = "v0.1";
+        PhotonNetwork.GameVersion = "v0.2";
         PhotonNetwork.ConnectUsingSettings();
     }
 

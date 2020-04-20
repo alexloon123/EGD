@@ -1,77 +1,109 @@
-﻿using System.Collections;
+﻿using ExitGames.Client.Photon;
+using Photon.Pun;
+using Photon.Realtime;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    //Prefabs
-    [SerializeField] GameObject PREFAB_vertex;
-    [SerializeField] GameObject PREFAB_line;
-    //Vertex Positions
-    [SerializeField] Vector2[] positions;
-    //Vertex Path
-    [SerializeField] List<int> path;
+    //Printer for debugging
+    public TextDisplay disp;
 
-    //Z-position of lines and verts
-    public float z_depth;
-    //Maximum distance between connected verts
-    public float l_range;
-    //Chance of verts within range being connected
-    public float l_chance;
-    //Maximum curvature
-    public float l_curve;
+    //PREFABS
+    public GameObject PREFAB_playerPosition;
 
-    //Verts
-    Vertex[] vertices;
-    //Lines
-    Line[] lines;
+    //Player data set
+    List<Vector2> positions = new List<Vector2>();
+    List<string> names = new List<string>();
 
-    // Start is called before the first frame update
-    void Start() {
-        //Initialize vertecies array
-        vertices = new Vertex[positions.Length];
-        //Create vertex[i] at position[i]
-        for (int i = 0; i < positions.Length; i++) {
-            vertices[i] = Instantiate(PREFAB_vertex, new Vector3(positions[i].x, positions[i].y, z_depth), Quaternion.identity).GetComponent<Vertex>();
-            if (path.Contains(i)) {//Enable vertex collider
-                vertices[i].GetComponent<SphereCollider>().enabled = true;
-                vertices[i].GetComponent<Vertex>().OnPath = true;
-            }
-        }
-        //Initialize adjacency array
-        bool[,] adjacency = new bool[positions.Length, positions.Length];
-        //Adjacency range
-        
-        //Record edges to be created
-        List<(Vertex, Vertex)> edges = new List<(Vertex, Vertex)>();
-        //Set vertex[i] adjacent to all vertecies within a distance of _range
-        for (int i = 0; i < vertices.Length; i++) {
-            for (int j = i + 1; j < vertices.Length; j++) {
-                //Test distance between vertex[i] and vertex[j]
-                if (Mathf.Sqrt(
-                    Mathf.Pow(Mathf.Abs(positions[i].x - positions[j].x), 2) +
-                    Mathf.Pow(Mathf.Abs(positions[i].y - positions[j].y), 2)
-                ) <= l_range && Random.Range(0,1)<l_chance) {
-                    edges.Add((vertices[i], vertices[j]));
-                }
-            }
-        }
-        //Initialize lines array
-        lines = new Line[edges.Count];
-        //Create lines
-        for (int i = 0; i < edges.Count; i++) {
-            lines[i] = Instantiate(PREFAB_line, new Vector3(0, 0, z_depth), Quaternion.identity).GetComponent<Line>();
-            lines[i].Setup(edges[i].Item1, edges[i].Item2, l_curve);
-            if(edges[i].Item1.OnPath && edges[i].Item2.OnPath) {
-                lines[i].GetComponent<MeshCollider>().enabled = true;
-            }
-            //print("Line[" + i + "] had verts (" + edges[i].Item1.GetPosition() + "),(" + edges[i].Item2.GetPosition() + ")");
+    //Player location icons
+    List<GameObject> dots = null;
+
+    //Position of the pointer last frame
+    //(-1,-1) means no pointer last frame
+    public Vector2 pointer = new Vector2(-1, -1);
+    Vector2 v_null = new Vector2(-1, -1);
+
+    //CONSTS
+    public float max_lat;
+    public float min_lat;
+    public float max_long;
+    public float min_long;
+    float SENSITIVITY = 20.0f;
+
+    public void OnEnable() {
+        Photon.Pun.PhotonNetwork.AddCallbackTarget(this);
+        Photon.Pun.PhotonNetwork.NetworkingClient.EventReceived += NetworkingClient_EventReceived;
+    }
+
+    public void OnDisable() {
+        Photon.Pun. PhotonNetwork.RemoveCallbackTarget(this);
+        Photon.Pun.PhotonNetwork.NetworkingClient.EventReceived += NetworkingClient_EventReceived;
+    }
+
+    private void NetworkingClient_EventReceived(EventData obj) {
+        //New player has connected
+        if (obj.Code == 1) {
+            //Pull data from event
+            object[] data = (object[])obj.CustomData;
+            Vector2 position = (Vector2)data[0];
+            string nickname = (string)data[1];
+            //Convert position to map coords
+            position = GlobeToMap(position);
+            //Add new player to the data set
+            positions.Add(position);
+            names.Add(name);
+            disp.QueueMsg(nickname + " connected");
+            DisplayPlayers();
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void DisplayPlayers() {
+        //Clear the map
+        if (dots != null) {
+            for (int i = 0; i < dots.Count; i++) {
+                Destroy(dots[i]);
+            }
+        }
+        dots = new List<GameObject>();
+
+        //Displays all players in the data set
+        for (int i = 0; i < positions.Count; i++) {
+            Vector2 position = positions[i];
+            GameObject dot = Instantiate(PREFAB_playerPosition, position, Quaternion.identity, this.gameObject.transform);
+            dot.GetComponent<RectTransform>().localPosition = position;
+            dots.Add(dot);
+        }
     }
+
+    //This converts <Latitude,Longitude> (globe) to <x,y> (map)
+    public Vector2 GlobeToMap(Vector2 globe) {
+        if (globe.x > max_lat || globe.x < min_lat || globe.y > max_long || globe.y < min_long) {
+            disp.QueueMsg("OUT OF MAP BOUNDS");
+            return globe;
+        }
+
+        Vector3 position = new Vector3(-1, -1, 0);
+        position.x += 2 * ((globe.y - min_long) / (max_long - min_long));
+        position.y += 2 * ((globe.x - min_lat) / (max_lat - min_lat));
+
+        position.x *= GetComponent<RectTransform>().rect.width / 2;
+        position.y *= GetComponent<RectTransform>().rect.height / 2;
+        return position;
+    }
+
+    public void Update() {
+        if (Input.GetMouseButton(0)) {
+            if(pointer != v_null) {
+                Vector2 diff = new Vector2(Input.mousePosition.x - pointer.x, Input.mousePosition.y - pointer.y);
+                gameObject.transform.Translate(SENSITIVITY * Camera.main.ScreenToViewportPoint(new Vector3(diff.x, diff.y, 0)));
+            }
+            pointer.Set(Input.mousePosition.x, Input.mousePosition.y);
+        } else if(pointer != v_null) {
+            //End of swipe
+            pointer.Set(-1, -1);
+        }
+    }
+
 }
