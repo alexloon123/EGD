@@ -3,6 +3,7 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.SceneManagement;
 
 public class NetworkConnectionManager : MonoBehaviourPunCallbacks
@@ -14,7 +15,12 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Ask for location permission
+        #if PLATFORM_ANDROID
+        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation)) {
+            Permission.RequestUserPermission(Permission.FineLocation);
+        }
+        #endif
     }
 
     // Update is called once per frame
@@ -27,7 +33,7 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         PhotonNetwork.OfflineMode = false;
         PhotonNetwork.NickName = text_nickname.GetComponent<UnityEngine.UI.Text>().text;
         PhotonNetwork.AutomaticallySyncScene = true;
-        PhotonNetwork.GameVersion = "v0.2";
+        PhotonNetwork.GameVersion = "0.3";
         PhotonNetwork.ConnectUsingSettings();
     }
 

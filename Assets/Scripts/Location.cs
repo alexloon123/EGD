@@ -12,13 +12,6 @@ public class Location : MonoBehaviour {
 
     public void Start() {
 
-        //Ask for location permission
-        #if PLATFORM_ANDROID
-        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation)) {
-            Permission.RequestUserPermission(Permission.FineLocation);
-        }
-        #endif
-
         //Get the player's location
         StartCoroutine(Locate());
 
