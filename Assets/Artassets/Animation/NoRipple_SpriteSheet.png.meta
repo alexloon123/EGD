@@ -1,0 +1,3536 @@
+fileFormatVersion: 2
+guid: 238135deb4ea0cb4d888158032575ef7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7053526557073171378
+    second: Ripple_SpriteSheet_0
+  - first:
+      213: -5526138965076955345
+    second: Ripple_SpriteSheet_1
+  - first:
+      213: 3406609066575645541
+    second: Ripple_SpriteSheet_2
+  - first:
+      213: 3660134204839414870
+    second: Ripple_SpriteSheet_3
+  - first:
+      213: -1401004726937416158
+    second: Ripple_SpriteSheet_4
+  - first:
+      213: 3381592478780279799
+    second: Ripple_SpriteSheet_5
+  - first:
+      213: -2325469787647497522
+    second: Ripple_SpriteSheet_6
+  - first:
+      213: 6612971120125302702
+    second: Ripple_SpriteSheet_7
+  - first:
+      213: 3800414055194104308
+    second: Ripple_SpriteSheet_8
+  - first:
+      213: 6289229374224246550
+    second: Ripple_SpriteSheet_9
+  - first:
+      213: -9144825492057907218
+    second: Ripple_SpriteSheet_10
+  - first:
+      213: 724135392871933979
+    second: Ripple_SpriteSheet_11
+  - first:
+      213: -1055071047942141817
+    second: Ripple_SpriteSheet_12
+  - first:
+      213: 868247615466415488
+    second: Ripple_SpriteSheet_13
+  - first:
+      213: 5379986118788525068
+    second: Ripple_SpriteSheet_14
+  - first:
+      213: -7582996079165895822
+    second: Ripple_SpriteSheet_15
+  - first:
+      213: -3960880015271035655
+    second: Ripple_SpriteSheet_16
+  - first:
+      213: 8984131602106105969
+    second: Ripple_SpriteSheet_17
+  - first:
+      213: -1217162820624150947
+    second: Ripple_SpriteSheet_18
+  - first:
+      213: -2677506481562764737
+    second: Ripple_SpriteSheet_19
+  - first:
+      213: 5201820537331399549
+    second: Ripple_SpriteSheet_20
+  - first:
+      213: 965595967223105768
+    second: Ripple_SpriteSheet_21
+  - first:
+      213: 7329808857947235307
+    second: Ripple_SpriteSheet_22
+  - first:
+      213: -7609250164371707581
+    second: Ripple_SpriteSheet_23
+  - first:
+      213: 7421030494254532977
+    second: Ripple_SpriteSheet_24
+  - first:
+      213: -5620260552892479562
+    second: Ripple_SpriteSheet_25
+  - first:
+      213: -2782773501216905726
+    second: Ripple_SpriteSheet_26
+  - first:
+      213: 8122046015445271501
+    second: Ripple_SpriteSheet_27
+  - first:
+      213: 4313787660373799313
+    second: Ripple_SpriteSheet_28
+  - first:
+      213: -7834923844383548191
+    second: Ripple_SpriteSheet_29
+  - first:
+      213: 7853056206529588612
+    second: Ripple_SpriteSheet_30
+  - first:
+      213: 8074558532926433540
+    second: Ripple_SpriteSheet_31
+  - first:
+      213: -5410311310223471037
+    second: Ripple_SpriteSheet_32
+  - first:
+      213: -5027203755813180478
+    second: Ripple_SpriteSheet_33
+  - first:
+      213: 5585088581908445056
+    second: Ripple_SpriteSheet_34
+  - first:
+      213: 1237670787187749884
+    second: Ripple_SpriteSheet_35
+  - first:
+      213: 3389209685455656851
+    second: Ripple_SpriteSheet_36
+  - first:
+      213: -8160813684252823042
+    second: Ripple_SpriteSheet_37
+  - first:
+      213: -3294320310850220832
+    second: Ripple_SpriteSheet_38
+  - first:
+      213: 2349648556230497559
+    second: Ripple_SpriteSheet_39
+  - first:
+      213: 6955309243077822654
+    second: Ripple_SpriteSheet_40
+  - first:
+      213: 1646083261798461762
+    second: Ripple_SpriteSheet_41
+  - first:
+      213: 4656605048033229972
+    second: Ripple_SpriteSheet_42
+  - first:
+      213: 4346303135767726398
+    second: Ripple_SpriteSheet_43
+  - first:
+      213: 2443125073071919490
+    second: Ripple_SpriteSheet_44
+  - first:
+      213: -8867182773935277830
+    second: Ripple_SpriteSheet_45
+  - first:
+      213: -2945458229290150235
+    second: Ripple_SpriteSheet_46
+  - first:
+      213: 3545994457771223256
+    second: Ripple_SpriteSheet_47
+  - first:
+      213: 1542242920395729264
+    second: Ripple_SpriteSheet_48
+  - first:
+      213: -5451246100043765115
+    second: Ripple_SpriteSheet_49
+  - first:
+      213: -4019058659678990044
+    second: Ripple_SpriteSheet_50
+  - first:
+      213: 3789525099428448387
+    second: Ripple_SpriteSheet_51
+  - first:
+      213: -270825323590506748
+    second: Ripple_SpriteSheet_52
+  - first:
+      213: 1904707799145884716
+    second: Ripple_SpriteSheet_53
+  - first:
+      213: 9024672037582584895
+    second: Ripple_SpriteSheet_54
+  - first:
+      213: 7653838465935096501
+    second: Ripple_SpriteSheet_55
+  - first:
+      213: 6941157159608489134
+    second: Ripple_SpriteSheet_56
+  - first:
+      213: -5117301094785110889
+    second: Ripple_SpriteSheet_57
+  - first:
+      213: -1670286837433316800
+    second: Ripple_SpriteSheet_58
+  - first:
+      213: 8317307263100889715
+    second: Ripple_SpriteSheet_59
+  - first:
+      213: 4791469599930116085
+    second: Ripple_SpriteSheet_60
+  - first:
+      213: 4031712917617256643
+    second: Ripple_SpriteSheet_61
+  - first:
+      213: -3871484733863313855
+    second: Ripple_SpriteSheet_62
+  - first:
+      213: 7337875083063740468
+    second: Ripple_SpriteSheet_63
+  - first:
+      213: 342692678778352348
+    second: Ripple_SpriteSheet_64
+  - first:
+      213: 681896549409808965
+    second: Ripple_SpriteSheet_65
+  - first:
+      213: 19211351677289330
+    second: Ripple_SpriteSheet_66
+  - first:
+      213: -1005536740641517172
+    second: Ripple_SpriteSheet_67
+  - first:
+      213: -1389465777137683260
+    second: Ripple_SpriteSheet_68
+  - first:
+      213: -9170334826738279279
+    second: Ripple_SpriteSheet_69
+  - first:
+      213: -6654047438540241631
+    second: Ripple_SpriteSheet_70
+  - first:
+      213: -4141493225026682939
+    second: Ripple_SpriteSheet_71
+  - first:
+      213: -5324300495116038801
+    second: Ripple_SpriteSheet_72
+  - first:
+      213: 805183499236880043
+    second: Ripple_SpriteSheet_73
+  - first:
+      213: -3186603280927806054
+    second: Ripple_SpriteSheet_74
+  - first:
+      213: -4506891090312471275
+    second: Ripple_SpriteSheet_75
+  - first:
+      213: 1797235517719103919
+    second: Ripple_SpriteSheet_76
+  - first:
+      213: 3718051198215887452
+    second: Ripple_SpriteSheet_77
+  - first:
+      213: 160886284704597069
+    second: Ripple_SpriteSheet_78
+  - first:
+      213: 2537174058155719928
+    second: Ripple_SpriteSheet_79
+  - first:
+      213: -5915784699882961599
+    second: Ripple_SpriteSheet_80
+  - first:
+      213: 8974516355387109540
+    second: Ripple_SpriteSheet_81
+  - first:
+      213: -1414598762589915974
+    second: Ripple_SpriteSheet_82
+  - first:
+      213: -3669470082482584154
+    second: Ripple_SpriteSheet_83
+  - first:
+      213: -2209944771900647185
+    second: Ripple_SpriteSheet_84
+  - first:
+      213: -2502260186542541148
+    second: Ripple_SpriteSheet_85
+  - first:
+      213: -6421116248840368855
+    second: Ripple_SpriteSheet_86
+  - first:
+      213: 5216481399053102601
+    second: Ripple_SpriteSheet_87
+  - first:
+      213: 4411866411589227711
+    second: Ripple_SpriteSheet_88
+  - first:
+      213: 4396844997692896702
+    second: Ripple_SpriteSheet_89
+  - first:
+      213: -6032305845455193112
+    second: Ripple_SpriteSheet_90
+  - first:
+      213: -3511584623371708523
+    second: Ripple_SpriteSheet_91
+  - first:
+      213: 26257913678303712
+    second: Ripple_SpriteSheet_92
+  - first:
+      213: 6427913794598849982
+    second: Ripple_SpriteSheet_93
+  - first:
+      213: 5435885470287558658
+    second: Ripple_SpriteSheet_94
+  - first:
+      213: -1062852512106717319
+    second: Ripple_SpriteSheet_95
+  - first:
+      213: -6025999294996081903
+    second: Ripple_SpriteSheet_96
+  - first:
+      213: -3214830261502975767
+    second: Ripple_SpriteSheet_97
+  - first:
+      213: 5924290841685343557
+    second: Ripple_SpriteSheet_98
+  - first:
+      213: -4873374441324736349
+    second: Ripple_SpriteSheet_99
+  - first:
+      213: -3796911157670995491
+    second: Ripple_SpriteSheet_100
+  - first:
+      213: 4302818534209077184
+    second: Ripple_SpriteSheet_101
+  - first:
+      213: 3930079768277975874
+    second: Ripple_SpriteSheet_102
+  - first:
+      213: 5067098320013997131
+    second: Ripple_SpriteSheet_103
+  - first:
+      213: 4372635498299405715
+    second: Ripple_SpriteSheet_104
+  - first:
+      213: -8327040350437655591
+    second: Ripple_SpriteSheet_105
+  - first:
+      213: -1939666950040745705
+    second: Ripple_SpriteSheet_106
+  - first:
+      213: -4577704239519900156
+    second: Ripple_SpriteSheet_107
+  - first:
+      213: 3872795562732641101
+    second: Ripple_SpriteSheet_108
+  - first:
+      213: -941996599116373967
+    second: Ripple_SpriteSheet_109
+  - first:
+      213: -7788825891609186242
+    second: Ripple_SpriteSheet_110
+  - first:
+      213: -4852596674153506335
+    second: Ripple_SpriteSheet_111
+  - first:
+      213: -6990989167585405125
+    second: Ripple_SpriteSheet_112
+  - first:
+      213: -3608882132504835765
+    second: Ripple_SpriteSheet_113
+  - first:
+      213: 5413226695686409418
+    second: Ripple_SpriteSheet_114
+  - first:
+      213: 191921947000594065
+    second: Ripple_SpriteSheet_115
+  - first:
+      213: 6344564217110538285
+    second: Ripple_SpriteSheet_116
+  - first:
+      213: 767526588757593419
+    second: Ripple_SpriteSheet_117
+  - first:
+      213: 4721084084305468526
+    second: Ripple_SpriteSheet_118
+  - first:
+      213: -83744349516374915
+    second: Ripple_SpriteSheet_119
+  - first:
+      213: -1897784512947454622
+    second: Ripple_SpriteSheet_120
+  - first:
+      213: 7166239873356836968
+    second: Ripple_SpriteSheet_121
+  - first:
+      213: -814523271946113195
+    second: Ripple_SpriteSheet_122
+  - first:
+      213: 6063103912645594771
+    second: Ripple_SpriteSheet_123
+  - first:
+      213: 5794912953858734078
+    second: Ripple_SpriteSheet_124
+  - first:
+      213: -2507990731858627782
+    second: Ripple_SpriteSheet_125
+  - first:
+      213: 2412986351722547268
+    second: Ripple_SpriteSheet_126
+  - first:
+      213: -922873555102471398
+    second: Ripple_SpriteSheet_127
+  - first:
+      213: 7918383099456418286
+    second: Ripple_SpriteSheet_128
+  - first:
+      213: -5392681911883427948
+    second: Ripple_SpriteSheet_129
+  - first:
+      213: 3257858283194756515
+    second: Ripple_SpriteSheet_130
+  - first:
+      213: -6199077322830224353
+    second: Ripple_SpriteSheet_131
+  - first:
+      213: -1544815538270596821
+    second: Ripple_SpriteSheet_132
+  - first:
+      213: 7708976101797836463
+    second: Ripple_SpriteSheet_133
+  - first:
+      213: 7531524663034076490
+    second: Ripple_SpriteSheet_134
+  - first:
+      213: -7576120791489429338
+    second: Ripple_SpriteSheet_135
+  - first:
+      213: -159250336760344350
+    second: Ripple_SpriteSheet_136
+  - first:
+      213: -8334391461558513547
+    second: Ripple_SpriteSheet_137
+  - first:
+      213: -675304309622573278
+    second: Ripple_SpriteSheet_138
+  - first:
+      213: -1378782386206559428
+    second: Ripple_SpriteSheet_139
+  - first:
+      213: -8863977979745862080
+    second: Ripple_SpriteSheet_140
+  - first:
+      213: 6007314867303642279
+    second: Ripple_SpriteSheet_141
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15120
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b36120580923e160800000000000000
+      internalID: 7053526557073171378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 15120
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fa427d3e53f43b0800000000000000
+      internalID: -5526138965076955345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 15120
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bcdd5a5e4b64f20800000000000000
+      internalID: 3406609066575645541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 15120
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cc5b5caa86bc230800000000000000
+      internalID: 3660134204839414870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 15120
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e804aaf91ae8ce0800000000000000
+      internalID: -1401004726937416158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14580
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbc4d86174ddee20800000000000000
+      internalID: 3381592478780279799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 14580
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca2e5b8c854abfd0800000000000000
+      internalID: -2325469787647497522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 14580
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea75cfc523ef5cb50800000000000000
+      internalID: 6612971120125302702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 14580
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f11f3f9278cdb430800000000000000
+      internalID: 3800414055194104308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 14580
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617a6994bc4d74750800000000000000
+      internalID: 6289229374224246550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14040
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef93f49aad071180800000000000000
+      internalID: -9144825492057907218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 14040
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b186b6d9d45ac0a00800000000000000
+      internalID: 724135392871933979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 14040
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7880c9ec872ab51f0800000000000000
+      internalID: -1055071047942141817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 14040
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085a4f82b92ac0c00800000000000000
+      internalID: 868247615466415488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 14040
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c2ce2eedc89aa40800000000000000
+      internalID: 5379986118788525068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13500
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b03201e39c3c690800000000000000
+      internalID: -7582996079165895822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 13500
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc73db9c902809c0800000000000000
+      internalID: -3960880015271035655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 13500
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17045e6971c0eac70800000000000000
+      internalID: 8984131602106105969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 13500
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e82ea0dd4cb1fe0800000000000000
+      internalID: -1217162820624150947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 13500
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a35a28a0697dad0800000000000000
+      internalID: -2677506481562764737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12960
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b38f0e734903840800000000000000
+      internalID: 5201820537331399549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 12960
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e802ee8a6c766d00800000000000000
+      internalID: 965595967223105768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 12960
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3e4714256b8b560800000000000000
+      internalID: 7329808857947235307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 12960
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349aa818a43866690800000000000000
+      internalID: -7609250164371707581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 12960
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179026d8aebccf660800000000000000
+      internalID: 7421030494254532977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12420
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b704b7fdc2d002b0800000000000000
+      internalID: -5620260552892479562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 12420
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206a8919e3a9169d0800000000000000
+      internalID: -2782773501216905726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 12420
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc30eff81dd47b070800000000000000
+      internalID: 8122046015445271501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 12420
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1913b0d8507addb30800000000000000
+      internalID: 4313787660373799313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 12420
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecd7455642c44390800000000000000
+      internalID: -7834923844383548191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11880
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d6f573309abfc60800000000000000
+      internalID: 7853056206529588612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 11880
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409ed2174389e0070800000000000000
+      internalID: 8074558532926433540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 11880
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e0ad54786bae4b0800000000000000
+      internalID: -5410311310223471037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 11880
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbee31c1d8cb3ab0800000000000000
+      internalID: -5027203755813180478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 11880
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0873eb36978328d40800000000000000
+      internalID: 5585088581908445056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11340
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3343306071d2110800000000000000
+      internalID: 1237670787187749884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 11340
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397d5ea8044e80f20800000000000000
+      internalID: 3389209685455656851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 11340
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1b6f72137febe80800000000000000
+      internalID: -8160813684252823042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 11340
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec0b6f91293842d0800000000000000
+      internalID: -3294320310850220832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 11340
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715d025b9e0ab9020800000000000000
+      internalID: 2349648556230497559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10800
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb805a0e7e8368060800000000000000
+      internalID: 6955309243077822654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 10800
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241b63a510018d610800000000000000
+      internalID: 1646083261798461762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 10800
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cbf439e959f9040800000000000000
+      internalID: 4656605048033229972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 10800
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e390a9d9cab215c30800000000000000
+      internalID: 4346303135767726398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 10800
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2815d4a4f49b7e120800000000000000
+      internalID: 2443125073071919490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10260
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8ff195f3071f480800000000000000
+      internalID: -8867182773935277830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 10260
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6d86e9851af17d0800000000000000
+      internalID: -2945458229290150235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 10260
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d825fefb27e53130800000000000000
+      internalID: 3545994457771223256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 10260
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0796c83d3c5276510800000000000000
+      internalID: 1542242920395729264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 10260
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a68afcd884954b0800000000000000
+      internalID: -5451246100043765115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9720
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4215062617f6938c0800000000000000
+      internalID: -4019058659678990044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 9720
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3880cda0009179430800000000000000
+      internalID: 3789525099428448387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 9720
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40725379dc5dd3cf0800000000000000
+      internalID: -270825323590506748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 9720
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ca109d6a1ee6a10800000000000000
+      internalID: 1904707799145884716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 9720
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cb28647631e3d70800000000000000
+      internalID: 9024672037582584895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9180
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba38427885e73a60800000000000000
+      internalID: 7653838465935096501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 9180
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea49f9c29a1f35060800000000000000
+      internalID: 6941157159608489134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 9180
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79cad9454c1bbf8b0800000000000000
+      internalID: -5117301094785110889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 9180
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ac6cd88f2f1d8e0800000000000000
+      internalID: -1670286837433316800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 9180
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aa7e883e20d6370800000000000000
+      internalID: 8317307263100889715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8640
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7eaeff638be7240800000000000000
+      internalID: 4791469599930116085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 8640
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c82ee2a98583f730800000000000000
+      internalID: 4031712917617256643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8640
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ebab48529b54ac0800000000000000
+      internalID: -3871484733863313855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 8640
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4384434a28e55d560800000000000000
+      internalID: 7337875083063740468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 8640
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2f5b9fc2d71c400800000000000000
+      internalID: 342692678778352348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8100
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542e2218c45967900800000000000000
+      internalID: 681896549409808965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 8100
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27341606f90444000800000000000000
+      internalID: 19211351677289330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8100
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81557579ad9b02f0800000000000000
+      internalID: -1005536740641517172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 8100
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c47526cc30a7bce0800000000000000
+      internalID: -1389465777137683260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 8100
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c1fd4cf0d6cb080800000000000000
+      internalID: -9170334826738279279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7560
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125063bfb1318a3a0800000000000000
+      internalID: -6654047438540241631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7560
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cff89abad57686c0800000000000000
+      internalID: -4141493225026682939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7560
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d0c27b8e84c16b0800000000000000
+      internalID: -5324300495116038801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7560
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae250360269c2b00800000000000000
+      internalID: 805183499236880043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7560
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d24380339e6c3d0800000000000000
+      internalID: -3186603280927806054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7020
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d5d809e6e4471c0800000000000000
+      internalID: -4506891090312471275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7020
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9cc536e2011f810800000000000000
+      internalID: 1797235517719103919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7020
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a9f5e9ddb299330800000000000000
+      internalID: 3718051198215887452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7020
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44cc0939359b3200800000000000000
+      internalID: 160886284704597069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7020
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc35b50d5ad53320800000000000000
+      internalID: 2537174058155719928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6480
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14509cb9829e6eda0800000000000000
+      internalID: -5915784699882961599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6480
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a038c18313eb8c70800000000000000
+      internalID: 8974516355387109540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6480
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4fe189be55e5ce0800000000000000
+      internalID: -1414598762589915974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6480
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5c3b3d66c631dc0800000000000000
+      internalID: -3669470082482584154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6480
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe851a150f2b451e0800000000000000
+      internalID: -2209944771900647185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5940
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6778d2e9f264dd0800000000000000
+      internalID: -2502260186542541148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5940
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d816ecacc93e6a0800000000000000
+      internalID: -6421116248840368855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5940
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e2effb13aa46840800000000000000
+      internalID: 5216481399053102601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5940
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4d04350291a3d30800000000000000
+      internalID: 4411866411589227711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5940
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb530fbda3bb40d30800000000000000
+      internalID: 4396844997692896702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb71294bc1f84ca0800000000000000
+      internalID: -6032305845455193112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5400
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5979435e368544fc0800000000000000
+      internalID: -3511584623371708523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5400
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e19651fe694d5000800000000000000
+      internalID: 26257913678303712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5400
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdc5e52a89843950800000000000000
+      internalID: 6427913794598849982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5400
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2087230e805207b40800000000000000
+      internalID: 5435885470287558658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4860
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f5f3f754dff31f0800000000000000
+      internalID: -1062852512106717319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4860
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113110d71995f5ca0800000000000000
+      internalID: -6025999294996081903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4860
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e060f9f8e0a263d0800000000000000
+      internalID: -3214830261502975767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4860
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d31ccd12f473250800000000000000
+      internalID: 5924290841685343557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4860
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a01f5f04cb4e5cb0800000000000000
+      internalID: -4873374441324736349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd99d434b69ae4bc0800000000000000
+      internalID: -3796911157670995491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4320
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfbf78d8aea6bb30800000000000000
+      internalID: 4302818534209077184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4320
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243882f0ab27a8630800000000000000
+      internalID: 3930079768277975874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4320
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44b96e4313f15640800000000000000
+      internalID: 5067098320013997131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4320
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395366881d8beac30800000000000000
+      internalID: 4372635498299405715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3780
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbb1d97be8607c80800000000000000
+      internalID: -8327040350437655591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3780
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719814c8f2be415e0800000000000000
+      internalID: -1939666950040745705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3780
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40edd947f3ab870c0800000000000000
+      internalID: -4577704239519900156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3780
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b536c9b0feeb530800000000000000
+      internalID: 3872795562732641101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3780
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130ea02851b5de2f0800000000000000
+      internalID: -941996599116373967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30f4495e1888e390800000000000000
+      internalID: -7788825891609186242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3240
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e996d6f80d18acb0800000000000000
+      internalID: -4852596674153506335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3240
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37d77554640bfe90800000000000000
+      internalID: -6990989167585405125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3240
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b498bc732dcaaedc0800000000000000
+      internalID: -3608882132504835765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3240
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acccc0dcff4af1b40800000000000000
+      internalID: 5413226695686409418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2700
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e52937ef7d9a200800000000000000
+      internalID: 191921947000594065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2700
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28278f5a8b6c0850800000000000000
+      internalID: 6344564217110538285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2700
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d409ead5dc6aa00800000000000000
+      internalID: 767526588757593419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2700
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c17c716f8a48140800000000000000
+      internalID: 4721084084305468526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2700
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c512335fa76def0800000000000000
+      internalID: -83744349516374915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d77855a07b9a5e0800000000000000
+      internalID: -1897784512947454622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2160
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860bcaa4239937360800000000000000
+      internalID: 7166239873356836968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fec52566b32b4f0800000000000000
+      internalID: -814523271946113195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2160
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e858582e8742450800000000000000
+      internalID: 6063103912645594771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef73f07f0aaab6050800000000000000
+      internalID: 5794912953858734078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33389f97b3d13dd0800000000000000
+      internalID: -2507990731858627782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448c9466d46ac7120800000000000000
+      internalID: 2412986351722547268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1be387246b4133f0800000000000000
+      internalID: -922873555102471398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee17e8eb97fb3ed60800000000000000
+      internalID: 7918383099456418286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1620
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f838f6f585925b0800000000000000
+      internalID: -5392681911883427948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad236209dc363d20800000000000000
+      internalID: 3257858283194756515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14668dd40478f9a0800000000000000
+      internalID: -6199077322830224353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2190e5e376bf8ae0800000000000000
+      internalID: -1544815538270596821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6b2a1bbe8cbfa60800000000000000
+      internalID: 7708976101797836463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d5d3df6c9558860800000000000000
+      internalID: 7531524663034076490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a042d7b7463cd690800000000000000
+      internalID: -7576120791489429338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0d90799aa3acdf0800000000000000
+      internalID: -159250336760344350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57091ca8f1b465c80800000000000000
+      internalID: -8334391461558513547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_138
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227f7adee46d0a6f0800000000000000
+      internalID: -675304309622573278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_139
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 540
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33b79f89b49ddce0800000000000000
+      internalID: -1378782386206559428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04efc54adf2dcf480800000000000000
+      internalID: -8863977979745862080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ripple_SpriteSheet_141
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a47e8f2b054e5350800000000000000
+      internalID: 6007314867303642279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8d2aacc250e87634580ff5a4ba4882f9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
