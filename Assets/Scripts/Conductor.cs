@@ -89,11 +89,11 @@ public class Conductor : MonoBehaviour
                     Debug.Log("Space was pressed with the beat: " + beat + ". The currentLeftBeat is: " + currentLeftBeat + " and the loopPos was: " + loopPositionInBeats + " and the left beat stamp was: " + leftBeatsBeatStamps[currentLeftBeat]);
                     if (beat <= beatErrorMargin)
                     {
-                        cubeMarker.transform.position = new Vector3(5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                        playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                     }
                     else
                     {
-                        cubeMarker.transform.position = new Vector3(-5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                        playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                     }
                 }
 
@@ -110,11 +110,11 @@ public class Conductor : MonoBehaviour
                     Debug.Log("Space was pressed with the beat: " + beat + ". The currentRighttBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the right beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
                     if (beat <= beatErrorMargin)
                     {
-                        cubeMarker.transform.position = new Vector3(5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                        playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                     }
                     else
                     {
-                        cubeMarker.transform.position = new Vector3(-5f, cubeMarker.transform.position.y, cubeMarker.transform.position.z);
+                        playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                     }
                 }
             }
