@@ -36,7 +36,7 @@ public class Conductor : MonoBehaviour
     public bool right = false;
     public bool pressed = false;
 
-    public GameObject cubeMarker;
+    public GameObject playerMarker;
 
     void Awake()
     {
