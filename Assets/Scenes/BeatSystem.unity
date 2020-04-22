@@ -484,7 +484,9 @@ MonoBehaviour:
   left: 1
   right: 0
   pressed: 0
+  click: 0
   playerMarker: {fileID: 1562636496}
+  speed: 0
 --- !u!4 &352312485
 Transform:
   m_ObjectHideFlags: 0
@@ -743,7 +745,9 @@ MonoBehaviour:
   left: 1
   right: 0
   pressed: 0
+  click: 0
   playerMarker: {fileID: 1562636496}
+  speed: 0
 --- !u!4 &719410180
 Transform:
   m_ObjectHideFlags: 0
@@ -996,7 +1000,9 @@ MonoBehaviour:
   left: 0
   right: 1
   pressed: 0
+  click: 0
   playerMarker: {fileID: 1562636496}
+  speed: 0
 --- !u!4 &1312187627
 Transform:
   m_ObjectHideFlags: 0
@@ -1115,7 +1121,7 @@ GameObject:
   - component: {fileID: 1562636499}
   - component: {fileID: 1562636498}
   m_Layer: 0
-  m_Name: NoRipple_SpriteSheet_0
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1301,7 +1307,7 @@ GameObject:
   - component: {fileID: 1975501693}
   - component: {fileID: 1975501692}
   m_Layer: 0
-  m_Name: Ripple_SpriteSheet_0
+  m_Name: Player_RippleAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
