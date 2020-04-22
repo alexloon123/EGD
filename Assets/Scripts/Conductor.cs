@@ -40,6 +40,7 @@ public class Conductor : MonoBehaviour
     public GameObject playerMarker;
     public float speed;
 
+
     void Awake()
     {
         instance = this;
@@ -64,6 +65,22 @@ public class Conductor : MonoBehaviour
             currentLeftBeat = 0;
             currentRightBeat = 0;
             completedLoops++;
+            /*
+            float switchPossiblity = Random.Range(0.0f, 1.0f);
+            if(switchPossiblity > 0.75f)
+            {
+                if(left)
+                {
+                    right = true;
+                    left = false;
+                }
+                else if(right)
+                {
+                    right = false;
+                    left = true;
+                }
+            }
+            */
         }
         loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
