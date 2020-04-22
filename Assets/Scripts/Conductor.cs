@@ -27,6 +27,9 @@ public class Conductor : MonoBehaviour
     public float[] leftBeatsBeatStamps;
     public float[] rightBeatsBeatStamps;
 
+    public List<bool> leftBeatsHit;
+    public List<bool> rightBeatsHit;
+
     public float beatErrorMargin;
 
     public int currentLeftBeat;
@@ -34,7 +37,6 @@ public class Conductor : MonoBehaviour
 
     public bool left = true;
     public bool right = false;
-    public bool pressed = false;
     public bool click = false;
 
     public GameObject playerMarker;
@@ -52,12 +54,21 @@ public class Conductor : MonoBehaviour
         source = GetComponent<AudioSource>();
         secondsPerBeat = 60f / beatsPerMinute;
         dspSongTime = (float)AudioSettings.dspTime;
+        for(int i = 0; i < numberOfBeatsLeftChannel; i++)
+        {
+            leftBeatsHit.Add(false);
+        }
+        for(int j = 0; j < numberOfBeatsRightChannel; j++)
+        {
+            rightBeatsHit.Add(false);
+        }
         source.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Speed: " + speed);
         songPosition = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
         songPositionInBeats = songPosition / secondsPerBeat;
         if (songPositionInBeats >= (completedLoops + 1) * beatsPerLoop)
@@ -65,6 +76,14 @@ public class Conductor : MonoBehaviour
             currentLeftBeat = 0;
             currentRightBeat = 0;
             completedLoops++;
+            for (int i = 0; i < numberOfBeatsLeftChannel; i++)
+            {
+                leftBeatsHit[i] = false;
+            }
+            for (int j = 0; j < numberOfBeatsRightChannel; j++)
+            {
+                rightBeatsHit[j] = false;
+            }
             /*
             float switchPossiblity = Random.Range(0.0f, 1.0f);
             if(switchPossiblity > 0.75f)
@@ -84,19 +103,29 @@ public class Conductor : MonoBehaviour
         }
         loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
+        if (!click)
+        {
+            CheckInputs();
+        }
         if (currentLeftBeat + 1 < numberOfBeatsLeftChannel && leftBeatsBeatStamps[currentLeftBeat + 1] - beatErrorMargin <= loopPositionInBeats)
         {
             currentLeftBeat++;
+            if (left && leftBeatsHit[currentLeftBeat - 1] == false)
+            {
+                speed = 0.0f;
+                Debug.Log("Speed reset since nothing was pressed");
+            }
         }
 
         if (currentRightBeat + 1 < numberOfBeatsRightChannel && rightBeatsBeatStamps[currentRightBeat + 1] - beatErrorMargin <= loopPositionInBeats)
         {
             currentRightBeat++;
+            if (right && rightBeatsHit[currentRightBeat - 1] == false)
+            {
+                speed = 0.0f;
+            }
         }
-        if(!click)
-        {
-            CheckInputs();
-        }
+        
         
     }
 
@@ -135,6 +164,7 @@ public class Conductor : MonoBehaviour
                         }
                         speed = beat;
                     }
+                    leftBeatsHit[currentLeftBeat] = true;
                 }
 
             }
@@ -168,6 +198,7 @@ public class Conductor : MonoBehaviour
                         }
                         speed = beat;
                     }
+                    rightBeatsHit[currentRightBeat] = true;
                 }
             }
         }
