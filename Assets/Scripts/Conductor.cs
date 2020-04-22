@@ -123,11 +123,23 @@ public class Conductor : MonoBehaviour
                     Debug.Log("Space was pressed with the beat: " + beat + ". The currentRighttBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the right beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
                     if (beat <= beatErrorMargin)
                     {
-                        playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                        if (playerMarker != null)
+                        {
+                            playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                            playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+                            playerMarker.GetComponent<SpriteRenderer>().enabled = false;
+                        }
+                        speed += (1.0f - beat);
                     }
                     else
                     {
-                        playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                        if (playerMarker != null)
+                        {
+                            playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                            playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+                            playerMarker.GetComponent<SpriteRenderer>().enabled = true;
+                        }
+                        speed = (1.0f - beat);
                     }
                 }
             }
