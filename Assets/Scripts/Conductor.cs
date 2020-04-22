@@ -37,6 +37,7 @@ public class Conductor : MonoBehaviour
     public bool pressed = false;
 
     public GameObject playerMarker;
+    public static float speed;
 
     void Awake()
     {
@@ -92,12 +93,14 @@ public class Conductor : MonoBehaviour
                         playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                         playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                         playerMarker.GetComponent<SpriteRenderer>().enabled = false;
+                        speed += (1.0f - beat);
                     }
                     else
                     {
                         playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                         playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                         playerMarker.GetComponent<SpriteRenderer>().enabled = true;
+                        speed = (1.0f - beat);
                     }
                 }
 
