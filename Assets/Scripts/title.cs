@@ -13,7 +13,7 @@ public class title : MonoBehaviour
 
     void Update()
     {
-        if(heartbeat.speed > 4)
+        if(heartbeat.speed > 5.0f)
         {
             playGame();
         }
