@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class NetworkConnectionManager : MonoBehaviourPunCallbacks
 {
-    public GameObject button_master;
-    public GameObject button_room;
+
     public GameObject text_nickname;
 
     // Start is called before the first frame update
@@ -20,7 +19,9 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation)) {
             Permission.RequestUserPermission(Permission.FineLocation);
         }
-        #endif
+#endif
+
+        ConnectToMaster();
     }
 
     // Update is called once per frame
@@ -48,11 +49,6 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         base.OnDisconnected(cause);
     }
 
-    public override void OnConnectedToMaster() {
-        base.OnConnectedToMaster();
-        button_master.SetActive(false);
-        button_room.SetActive(true);
-    }
 
     public override void OnJoinedRoom() {
         base.OnJoinedRoom();
