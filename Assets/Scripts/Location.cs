@@ -21,39 +21,42 @@ public class Location : MonoBehaviour {
     }
 
     IEnumerator Locate() {
+
+        Vector2 position = new Vector2(60.1699f, 24.9384f);
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser) {
             disp.QueueMsg("Location disabled");
-            yield break; 
-        }
-        // Start service before querying location
-        Input.location.Start();
+        } else {
+            // Start service before querying location
+            Input.location.Start();
 
-        // Wait until service initializes
-        int maxWait = 20;
-        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0) {
-            yield return new WaitForSeconds(1f);
-            maxWait--;
-        }
+            // Wait until service initializes
+            int maxWait = 20;
+            while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0) {
+                yield return new WaitForSeconds(1f);
+                maxWait--;
+            }
 
-        // Service didn't initialize in 20 seconds
-        if (maxWait < 1) {
-            disp.QueueMsg("Location timed out");
-            yield break;
+            // Service didn't initialize in 20 seconds
+            if (maxWait < 1) {
+                disp.QueueMsg("Location timed out");
+                yield break;
+            }
+            // Connection has failed
+            if (Input.location.status == LocationServiceStatus.Failed) {
+                disp.QueueMsg("Unable to determine device location");
+                yield break;
+            }
+            // Access granted and location value could be retrieved
+            else {
+                disp.QueueMsg("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
+                position = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
+            }
         }
+      
 
-        Vector2 position;
 
-        // Connection has failed
-        if (Input.location.status == LocationServiceStatus.Failed) {
-            disp.QueueMsg("Unable to determine device location");
-            yield break;
-        }
-        // Access granted and location value could be retrieved
-        else {
-            disp.QueueMsg("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
-            position = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
-        }
+       
 
         // Stop service if there is no need to query location updates continuously
         Input.location.Stop();
