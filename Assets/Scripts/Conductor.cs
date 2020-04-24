@@ -68,7 +68,7 @@ public class Conductor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Speed: " + speed);
+        //Debug.Log("Speed: " + speed);
         songPosition = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
         songPositionInBeats = songPosition / secondsPerBeat;
         if (songPositionInBeats >= (completedLoops + 1) * beatsPerLoop)
@@ -113,7 +113,7 @@ public class Conductor : MonoBehaviour
             if (left && leftBeatsHit[currentLeftBeat - 1] == false)
             {
                 speed = 0.0f;
-                Debug.Log("Speed reset since nothing was pressed");
+                //Debug.Log("Speed reset since nothing was pressed");
             }
         }
 
@@ -148,7 +148,7 @@ public class Conductor : MonoBehaviour
                     {
                         if (playerMarker != null)
                         {
-                            playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                            //playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = false;
                         }
@@ -158,7 +158,7 @@ public class Conductor : MonoBehaviour
                     {
                         if (playerMarker != null)
                         {
-                            playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                            //playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = true;
                         }
@@ -177,12 +177,12 @@ public class Conductor : MonoBehaviour
                 else
                 {
                     float beat = Mathf.Abs(loopPositionInBeats - rightBeatsBeatStamps[currentRightBeat]);
-                    Debug.Log("Space was pressed with the beat: " + beat + ". The currentRighttBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the right beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
+                    //Debug.Log("Space was pressed with the beat: " + beat + ". The currentRighttBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the right beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
                     if (beat <= beatErrorMargin)
                     {
                         if (playerMarker != null)
                         {
-                            playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                            //playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = false;
                         }
@@ -192,7 +192,7 @@ public class Conductor : MonoBehaviour
                     {
                         if (playerMarker != null)
                         {
-                            playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
+                            //playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = true;
                         }
