@@ -10,6 +10,9 @@ public class Location : MonoBehaviour {
     //Printer for debugging
     public TextDisplay disp;
 
+    public Map map;
+    public Conductor conductor;
+
     public void Start() {
 
         //Get the player's location
@@ -58,11 +61,12 @@ public class Location : MonoBehaviour {
         //Prepare PUN event
         byte b = 1;
         object[] content = new object[] { position, PhotonNetwork.NickName };
-        RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All };
+        RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
         SendOptions sendOptions = new SendOptions { Reliability = true };
         // Send new player data to master client
         Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
-
+        
+        conductor.playerMarker = map.DisplayPlayer(map.GlobeToMap(position));
 
     }
 

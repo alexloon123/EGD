@@ -16,9 +16,7 @@ public class Map : MonoBehaviour
     //Player data set
     List<Vector2> positions = new List<Vector2>();
     List<string> names = new List<string>();
-
-    //Player location icons
-    List<GameObject> dots = null;
+    List<GameObject> icons = new List<GameObject>();
 
     //Position of the pointer last frame
     //(-1,-1) means no pointer last frame
@@ -55,26 +53,14 @@ public class Map : MonoBehaviour
             positions.Add(position);
             names.Add(name);
             disp.QueueMsg(nickname + " connected");
-            DisplayPlayers();
+            icons.Add(DisplayPlayer(position));
         }
     }
 
-    public void DisplayPlayers() {
-        //Clear the map
-        if (dots != null) {
-            for (int i = 0; i < dots.Count; i++) {
-                Destroy(dots[i]);
-            }
-        }
-        dots = new List<GameObject>();
-
-        //Displays all players in the data set
-        for (int i = 0; i < positions.Count; i++) {
-            Vector2 position = positions[i];
-            GameObject dot = Instantiate(PREFAB_playerPosition, position, Quaternion.identity, this.gameObject.transform);
-            dot.GetComponent<RectTransform>().localPosition = position;
-            dots.Add(dot);
-        }
+    public GameObject DisplayPlayer(Vector2 position) {
+        GameObject temp = Instantiate(PREFAB_playerPosition, position, Quaternion.identity, this.gameObject.transform);
+        temp.GetComponent<RectTransform>().localPosition = position;
+        return temp;
     }
 
     //This converts <Latitude,Longitude> (globe) to <x,y> (map)
