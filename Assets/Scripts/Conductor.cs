@@ -144,6 +144,7 @@ public class Conductor : MonoBehaviour
                 {
                     float beat = Mathf.Abs(loopPositionInBeats - leftBeatsBeatStamps[currentLeftBeat]);
                     //Debug.Log("Space was pressed with the beat: " + beat + ". The currentLeftBeat is: " + currentLeftBeat + " and the loopPos was: " + loopPositionInBeats + " and the left beat stamp was: " + leftBeatsBeatStamps[currentLeftBeat]);
+                    //BEAT IS HIT CORRECTLY
                     if (beat <= beatErrorMargin)
                     {
                         if (playerMarker != null)
@@ -154,6 +155,7 @@ public class Conductor : MonoBehaviour
                         }
                         speed += (1.0f - beat);
                     }
+                    //BEAT IS NOT HIT
                     else
                     {
                         if (playerMarker != null)
@@ -178,6 +180,7 @@ public class Conductor : MonoBehaviour
                 {
                     float beat = Mathf.Abs(loopPositionInBeats - rightBeatsBeatStamps[currentRightBeat]);
                     //Debug.Log("Space was pressed with the beat: " + beat + ". The currentRighttBeat is: " + currentRightBeat + " and the loopPos was: " + loopPositionInBeats + " and the right beat stamp was: " + rightBeatsBeatStamps[currentRightBeat]);
+                    //BEAT IS HIT CORRECTLY
                     if (beat <= beatErrorMargin)
                     {
                         if (playerMarker != null)
@@ -185,9 +188,11 @@ public class Conductor : MonoBehaviour
                             //playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = false;
+                            //GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>()
                         }
                         speed += (1.0f - beat);
                     }
+                    //BEAT IS NOT HIT
                     else
                     {
                         if (playerMarker != null)

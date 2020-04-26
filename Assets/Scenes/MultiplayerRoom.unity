@@ -175,6 +175,11 @@ MonoBehaviour:
   disp: {fileID: 898677651}
   PREFAB_playerPosition: {fileID: 1713042245923534510, guid: a8905ec6be996bd4fa076fe027e675de,
     type: 3}
+  positions: []
+  my_position: {x: 0, y: 0}
+  names: []
+  my_name: 
+  icons: []
   pointer: {x: -1, y: -1}
   max_lat: 90
   min_lat: -90
@@ -531,6 +536,11 @@ PrefabInstance:
     - target: {fileID: 3284601594491214529, guid: 27e803e5d21c5934292e0db0694e3469,
         type: 3}
       propertyPath: m_Name
+      value: TextDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284601594491214529, guid: 27e803e5d21c5934292e0db0694e3469,
+        type: 3}
+      propertyPath: m_TagString
       value: TextDisplay
       objectReference: {fileID: 0}
     - target: {fileID: 3718118640036546858, guid: 27e803e5d21c5934292e0db0694e3469,
