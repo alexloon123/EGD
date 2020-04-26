@@ -34,7 +34,7 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         PhotonNetwork.OfflineMode = false;
         PhotonNetwork.NickName = text_nickname.GetComponent<UnityEngine.UI.Text>().text;
         PhotonNetwork.AutomaticallySyncScene = true;
-        PhotonNetwork.GameVersion = "0.3";
+        PhotonNetwork.GameVersion = "0.4";
         PhotonNetwork.ConnectUsingSettings();
     }
 

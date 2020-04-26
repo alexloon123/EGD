@@ -25,7 +25,7 @@ public class Location : MonoBehaviour {
         Vector2 position = new Vector2(60.1699f, 24.9384f);
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser) {
-            disp.QueueMsg("Location disabled");
+            //disp.QueueMsg("Location disabled");
         } else {
             // Start service before querying location
             Input.location.Start();
@@ -39,17 +39,17 @@ public class Location : MonoBehaviour {
 
             // Service didn't initialize in 20 seconds
             if (maxWait < 1) {
-                disp.QueueMsg("Location timed out");
+                //disp.QueueMsg("Location timed out");
                 yield break;
             }
             // Connection has failed
             if (Input.location.status == LocationServiceStatus.Failed) {
-                disp.QueueMsg("Unable to determine device location");
+                //disp.QueueMsg("Unable to determine device location");
                 yield break;
             }
             // Access granted and location value could be retrieved
             else {
-                disp.QueueMsg("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
+                //disp.QueueMsg("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
                 position = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
             }
         }
@@ -61,15 +61,24 @@ public class Location : MonoBehaviour {
         // Stop service if there is no need to query location updates continuously
         Input.location.Stop();
 
+
+        position = map.GlobeToMap(position);
+        map.positions.Add(position);
+        map.my_position = position;
+        map.names.Add(PhotonNetwork.NickName);
+        map.my_name = PhotonNetwork.NickName;
+
         //Prepare PUN event
         byte b = 1;
         object[] content = new object[] { position, PhotonNetwork.NickName };
         RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
         SendOptions sendOptions = new SendOptions { Reliability = true };
-        // Send new player data to master client
+        // Send new player data to other clients
         Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
-        
-        conductor.playerMarker = map.DisplayPlayer(map.GlobeToMap(position));
+
+        GameObject temp = map.DisplayPlayer(position);
+        conductor.playerMarker = temp;
+        map.icons.Add(temp);
 
     }
 

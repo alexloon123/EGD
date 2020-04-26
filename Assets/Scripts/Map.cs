@@ -14,9 +14,11 @@ public class Map : MonoBehaviour
     public GameObject PREFAB_playerPosition;
 
     //Player data set
-    List<Vector2> positions = new List<Vector2>();
-    List<string> names = new List<string>();
-    List<GameObject> icons = new List<GameObject>();
+    public List<Vector2> positions = new List<Vector2>();
+    public Vector2 my_position;
+    public List<string> names = new List<string>();
+    public string my_name;
+    public List<GameObject> icons = new List<GameObject>();
 
     //Position of the pointer last frame
     //(-1,-1) means no pointer last frame
@@ -48,13 +50,45 @@ public class Map : MonoBehaviour
             Vector2 position = (Vector2)data[0];
             string nickname = (string)data[1];
             //Convert position to map coords
-            position = GlobeToMap(position);
+            
             //Add new player to the data set
             positions.Add(position);
             names.Add(name);
-            disp.QueueMsg(nickname + " connected");
+            //disp.QueueMsg(nickname + " connected");
             icons.Add(DisplayPlayer(position));
+
+
+                //Prepare PUN event
+                byte b = 2;
+                object[] content = new object[] { my_position, my_name };
+                RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+                SendOptions sendOptions = new SendOptions { Reliability = true };
+                // Send new player data to master client
+                Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
+            
         }
+        //validating other clients
+        else if(obj.Code == 2) {
+            object[] data = (object[])obj.CustomData;
+            Vector2 new_position = (Vector2)data[0];
+            string new_name = (string)data[1];
+
+                bool found = false;
+                //Check for this player
+                for(int j = 0; j < positions.Count; j++) {
+                    if(positions[j] == new_position && names[j] == new_name) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) return;
+                //Add this player
+                positions.Add(new_position);
+                names.Add(new_name);
+                //disp.QueueMsg(new_name + " connected");
+                icons.Add(DisplayPlayer(new_position));
+            }
+        
     }
 
     public GameObject DisplayPlayer(Vector2 position) {
@@ -66,7 +100,7 @@ public class Map : MonoBehaviour
     //This converts <Latitude,Longitude> (globe) to <x,y> (map)
     public Vector2 GlobeToMap(Vector2 globe) {
         if (globe.x > max_lat || globe.x < min_lat || globe.y > max_long || globe.y < min_long) {
-            disp.QueueMsg("OUT OF MAP BOUNDS");
+            //disp.QueueMsg("OUT OF MAP BOUNDS");
             return globe;
         }
 
