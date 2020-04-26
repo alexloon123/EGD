@@ -42,6 +42,7 @@ public class Conductor : MonoBehaviour
     public GameObject playerMarker;
     public float speed;
 
+    public float messageDisplayProbability = 0.95f;
 
     void Awake()
     {
@@ -152,6 +153,11 @@ public class Conductor : MonoBehaviour
                             //playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = false;
+                            float msgChance = Random.Range(0.0f, 1.0f);
+                            if (msgChance >= messageDisplayProbability)
+                            {
+                                GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueGoodMsg();
+                            }
                         }
                         speed += (1.0f - beat);
                     }
@@ -163,6 +169,11 @@ public class Conductor : MonoBehaviour
                             //playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = true;
+                            float msgChance = Random.Range(0.0f, 1.0f);
+                            if (msgChance >= messageDisplayProbability)
+                            {
+                                GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueBadMsg();
+                            }
                         }
                         speed = beat;
                     }
@@ -188,7 +199,12 @@ public class Conductor : MonoBehaviour
                             //playerMarker.transform.position = new Vector3(5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = false;
-                            //GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>()
+                            float msgChance = Random.Range(0.0f, 1.0f);
+                            if(msgChance >= messageDisplayProbability)
+                            {
+                                GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueGoodMsg();
+                            }
+                            
                         }
                         speed += (1.0f - beat);
                     }
@@ -200,6 +216,11 @@ public class Conductor : MonoBehaviour
                             //playerMarker.transform.position = new Vector3(-5f, playerMarker.transform.position.y, playerMarker.transform.position.z);
                             playerMarker.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
                             playerMarker.GetComponent<SpriteRenderer>().enabled = true;
+                            float msgChance = Random.Range(0.0f, 1.0f);
+                            if (msgChance >= messageDisplayProbability)
+                            {
+                                GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueBadMsg();
+                            }
                         }
                         speed = beat;
                     }
