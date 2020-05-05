@@ -4,6 +4,7 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Map : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class Map : MonoBehaviour
                 object[] content = new object[] { my_position, my_name };
                 RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
                 SendOptions sendOptions = new SendOptions { Reliability = true };
-                // Send new player data to master client
+                // Send new player data to other clients
                 Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
             
         }
@@ -87,7 +88,22 @@ public class Map : MonoBehaviour
                 names.Add(new_name);
                 //disp.QueueMsg(new_name + " connected");
                 icons.Add(DisplayPlayer(new_position));
+        }
+        //client disconnecting
+        else if(obj.Code == 3) {
+            object[] data = (object[])obj.CustomData;
+            string new_name = (string)data[0];
+
+            for(int j = 0; j < positions.Count; j++) {
+                if(names[j] == new_name) {
+                    positions.RemoveAt(j);
+                    names.RemoveAt(j);
+                    GameObject temp = icons[j];
+                    icons.RemoveAt(j);
+                    Destroy(temp);
+                }
             }
+        }
         
     }
 
@@ -124,6 +140,25 @@ public class Map : MonoBehaviour
             //End of swipe
             pointer.Set(-1, -1);
         }
+    }
+
+    public void Disconnect() {
+        //Broadcast disconnect event
+        byte b = 3;
+        object[] content = new object[] { my_name };
+        RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+        SendOptions sendOptions = new SendOptions { Reliability = true };
+        Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
+
+        //Disconnect
+        StartCoroutine(Leave());
+    }
+
+    IEnumerator Leave() {
+        PhotonNetwork.Disconnect();
+        while (PhotonNetwork.IsConnected)
+            yield return null;
+        SceneManager.LoadScene("Titlescreen");
     }
 
 }

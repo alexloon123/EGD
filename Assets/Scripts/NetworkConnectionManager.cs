@@ -32,7 +32,7 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
 
     public void ConnectToMaster() {
         PhotonNetwork.OfflineMode = false;
-        PhotonNetwork.NickName = text_nickname.GetComponent<UnityEngine.UI.Text>().text;
+        
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.GameVersion = "0.4";
         PhotonNetwork.ConnectUsingSettings();
@@ -42,6 +42,7 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsConnected) {
             return;
         }
+        PhotonNetwork.NickName = text_nickname.GetComponent<UnityEngine.UI.Text>().text;
         PhotonNetwork.JoinRandomRoom();
     }
 

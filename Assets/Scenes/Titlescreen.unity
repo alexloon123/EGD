@@ -680,6 +680,7 @@ MonoBehaviour:
   click: 1
   playerMarker: {fileID: 0}
   speed: 0
+  messageDisplayProbability: 0.95
 --- !u!4 &462130037
 Transform:
   m_ObjectHideFlags: 0
