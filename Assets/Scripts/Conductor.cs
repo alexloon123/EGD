@@ -159,7 +159,7 @@ public class Conductor : MonoBehaviour
                                 GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueGoodMsg();
                             }
                         }
-                        speed += (1.0f - beat);
+                        speed += (1.0f - beat) / 2;
                         if (speed > 10f)
                         {
                             speed = 10f;
@@ -210,7 +210,7 @@ public class Conductor : MonoBehaviour
                             }
                             
                         }
-                        speed += (1.0f - beat);
+                        speed += (1.0f - beat) / 2;
                         if(speed > 10f)
                         {
                             speed = 10f;

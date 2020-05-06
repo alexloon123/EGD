@@ -18,6 +18,7 @@ public class Map : MonoBehaviour
     public bool connecting = false;
     int target_index = -1;
     int self_index = -1;
+    public float connectedErrorMargin = 1.0f;
 
     public Conductor conductor;
 
@@ -200,6 +201,13 @@ public class Map : MonoBehaviour
         icons[self_index].transform.position = Vector2.MoveTowards(player_position, target_position, current_speed * Time.deltaTime);
         positions[self_index] = player_position;
         positions[target_index] = target_position;
+
+        if(Mathf.Abs(positions[self_index].x - positions[target_index].x) <= connectedErrorMargin &&
+            Mathf.Abs(positions[self_index].y - positions[target_index].y) <= connectedErrorMargin)
+        {
+            Debug.Log("Connected!");
+            GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 
     public void Update() {
