@@ -37,7 +37,6 @@ public class Conductor : MonoBehaviour
 
     public bool left = true;
     public bool right = false;
-    public bool click = false;
 
     public GameObject playerMarker;
     public float speed;
@@ -104,10 +103,7 @@ public class Conductor : MonoBehaviour
         }
         loopPositionInBeats = songPositionInBeats - completedLoops * beatsPerLoop;
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
-        if (!click)
-        {
-            CheckInputs();
-        }
+        CheckInputs();
         if (currentLeftBeat + 1 < numberOfBeatsLeftChannel && leftBeatsBeatStamps[currentLeftBeat + 1] - beatErrorMargin <= loopPositionInBeats)
         {
             currentLeftBeat++;
@@ -132,7 +128,7 @@ public class Conductor : MonoBehaviour
 
     public void CheckInputs()
     {
-        if ((!click && Input.GetKeyDown(KeyCode.Space)) || (click))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
         {
 
             if (left)
