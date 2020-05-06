@@ -160,6 +160,10 @@ public class Conductor : MonoBehaviour
                             }
                         }
                         speed += (1.0f - beat);
+                        if (speed > 10f)
+                        {
+                            speed = 10f;
+                        }
                     }
                     //BEAT IS NOT HIT
                     else
@@ -207,6 +211,10 @@ public class Conductor : MonoBehaviour
                             
                         }
                         speed += (1.0f - beat);
+                        if(speed > 10f)
+                        {
+                            speed = 10f;
+                        }
                     }
                     //BEAT IS NOT HIT
                     else

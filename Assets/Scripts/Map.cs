@@ -197,7 +197,7 @@ public class Map : MonoBehaviour
         Vector2 target_position = positions[target_index];
         float current_speed = conductor.getSpeed();
 
-        icons[self_index].transform.position = Vector2.Lerp(player_position, target_position, current_speed * Time.deltaTime);
+        icons[self_index].transform.position = Vector2.MoveTowards(player_position, target_position, current_speed * Time.deltaTime);
         positions[self_index] = player_position;
         positions[target_index] = target_position;
     }
