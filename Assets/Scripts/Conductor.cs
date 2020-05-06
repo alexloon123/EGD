@@ -37,6 +37,7 @@ public class Conductor : MonoBehaviour
 
     public bool left = true;
     public bool right = false;
+    public bool click = false;
 
     public GameObject playerMarker;
     public float speed;
@@ -128,7 +129,7 @@ public class Conductor : MonoBehaviour
 
     public void CheckInputs()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Space) || (!click && Input.GetKeyDown(KeyCode.Mouse0)))
         {
 
             if (left)
