@@ -206,6 +206,7 @@ public class Map : MonoBehaviour
             Mathf.Abs(positions[self_index].y - positions[target_index].y) <= connectedErrorMargin)
         {
             Debug.Log("Connected!");
+            GameObject.FindGameObjectWithTag("ConnectedDisplay").gameObject.transform.position = positions[self_index];
             GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<SpriteRenderer>().enabled = true;
             StartCoroutine(DisplayConnected());
         }
