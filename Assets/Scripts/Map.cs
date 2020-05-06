@@ -11,6 +11,13 @@ public class Map : MonoBehaviour
     //Printer for debugging
     public TextDisplay disp;
 
+    //Waiting panel
+    public GameObject wait_panel;
+    public bool wait_pause = true;
+
+    //Disconnecting
+    bool dis = false;
+
     //PREFABS
     public GameObject PREFAB_playerPosition;
 
@@ -43,7 +50,36 @@ public class Map : MonoBehaviour
         Photon.Pun.PhotonNetwork.NetworkingClient.EventReceived += NetworkingClient_EventReceived;
     }
 
+    //Returns the number of players in the room, according to this player
+    //Returns -1 if this player has conflicting data
+    public int PlayerCount() {
+        if(positions.Count != names.Count || names.Count != icons.Count) {
+            return -1;
+        }
+        return positions.Count;
+    }
+
+    //Returns true if two players are in room
+    public void PlayerCheck() {
+        int p = PlayerCount();
+        if (p == 2) {       //Allow play
+            wait_panel.SetActive(false);
+            wait_pause = false;
+        } 
+        else if(p == 1) {   //Do not allow play
+            wait_panel.SetActive(true);
+            wait_pause = true;
+        } 
+        else if(p == -1){   //Something has gone very wrong  
+            disp.QueueMsg("Something has gone wrong, debug.logging lists...");
+            Debug.Log(names);
+            Debug.Log(positions);
+        }
+    }
+
     private void NetworkingClient_EventReceived(EventData obj) {
+        if (dis) return;
+
         //New player has connected
         if (obj.Code == 1) {
             //Pull data from event
@@ -54,10 +90,11 @@ public class Map : MonoBehaviour
             
             //Add new player to the data set
             positions.Add(position);
-            names.Add(name);
+            names.Add(nickname);
             //disp.QueueMsg(nickname + " connected");
             icons.Add(DisplayPlayer(position));
-
+            PlayerCheck();
+            disp.QueueMsg(nickname + " has connected!");
 
                 //Prepare PUN event
                 byte b = 2;
@@ -68,33 +105,28 @@ public class Map : MonoBehaviour
                 Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
             
         }
-        //validating other clients
+        //Old player sending data to new player
         else if(obj.Code == 2) {
+            //Pull data from event
             object[] data = (object[])obj.CustomData;
-            Vector2 new_position = (Vector2)data[0];
-            string new_name = (string)data[1];
+            Vector2 position = (Vector2)data[0];
+            string nickname = (string)data[1];
+            //Convert position to map coords
 
-                bool found = false;
-                //Check for this player
-                for(int j = 0; j < positions.Count; j++) {
-                    if(positions[j] == new_position && names[j] == new_name) {
-                        found = true;
-                        break;
-                    }
-                }
-                if (found) return;
-                //Add this player
-                positions.Add(new_position);
-                names.Add(new_name);
-                //disp.QueueMsg(new_name + " connected");
-                icons.Add(DisplayPlayer(new_position));
+            //Add new player to the data set
+            positions.Add(position);
+            names.Add(nickname);
+            //disp.QueueMsg(nickname + " connected");
+            icons.Add(DisplayPlayer(position));
+            PlayerCheck();
+            disp.QueueMsg(nickname + " has connected!");
         }
         //client disconnecting
         else if(obj.Code == 3) {
             object[] data = (object[])obj.CustomData;
             string new_name = (string)data[0];
-
-            for(int j = 0; j < positions.Count; j++) {
+            disp.QueueMsg(new_name + " has disconnected!");
+            for (int j = 0; j < positions.Count; j++) {
                 if(names[j] == new_name) {
                     positions.RemoveAt(j);
                     names.RemoveAt(j);
@@ -103,6 +135,7 @@ public class Map : MonoBehaviour
                     Destroy(temp);
                 }
             }
+            PlayerCheck();
         }
         
     }
@@ -143,6 +176,8 @@ public class Map : MonoBehaviour
     }
 
     public void Disconnect() {
+        if (dis) return;
+        dis = true;
         //Broadcast disconnect event
         byte b = 3;
         object[] content = new object[] { my_name };
@@ -151,10 +186,15 @@ public class Map : MonoBehaviour
         Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
 
         //Disconnect
+        
         StartCoroutine(Leave());
+        
+        
+        
     }
 
     IEnumerator Leave() {
+        yield return new WaitForSeconds(1);
         PhotonNetwork.Disconnect();
         while (PhotonNetwork.IsConnected)
             yield return null;
