@@ -303,6 +303,8 @@ MonoBehaviour:
   disp: {fileID: 898677651}
   wait_panel: {fileID: 1051252644}
   wait_pause: 1
+  connecting: 0
+  conductor: {fileID: 1949279797}
   PREFAB_playerPosition: {fileID: 1713042245923534510, guid: a8905ec6be996bd4fa076fe027e675de,
     type: 3}
   positions: []

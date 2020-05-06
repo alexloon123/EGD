@@ -123,8 +123,11 @@ public class Conductor : MonoBehaviour
                 speed = 0.0f;
             }
         }
-        
-        
+    }
+
+    public float getSpeed()
+    {
+        return speed;
     }
 
     public void CheckInputs()

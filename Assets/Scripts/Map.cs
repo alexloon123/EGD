@@ -15,6 +15,12 @@ public class Map : MonoBehaviour
     public GameObject wait_panel;
     public bool wait_pause = true;
 
+    public bool connecting = false;
+    int target_index = -1;
+    int self_index = -1;
+
+    public Conductor conductor;
+
     //Disconnecting
     bool dis = false;
 
@@ -69,6 +75,7 @@ public class Map : MonoBehaviour
         else if(p == 1) {   //Do not allow play
             wait_panel.SetActive(true);
             wait_pause = true;
+            connecting = false;
         } 
         else if(p == -1){   //Something has gone very wrong  
             disp.QueueMsg("Something has gone wrong, debug.logging lists...");
@@ -162,6 +169,39 @@ public class Map : MonoBehaviour
         return position;
     }
 
+
+    public void BeginConnecting()
+    {
+        if(!connecting)
+        {
+            for (int i = 0; i < positions.Count; i++)
+            {
+                if (my_position.Equals(positions[i]))
+                {
+                    self_index = i;
+                    continue;
+                }
+                else
+                {
+                    target_index = i;
+                    break;
+                }
+            }
+        }
+        connecting = true;
+    }
+
+    public void MoveToTarget()
+    {
+        Vector2 player_position = positions[self_index];
+        Vector2 target_position = positions[target_index];
+        float current_speed = conductor.getSpeed();
+
+        icons[self_index].transform.position = Vector2.Lerp(player_position, target_position, current_speed * Time.deltaTime);
+        positions[self_index] = player_position;
+        positions[target_index] = target_position;
+    }
+
     public void Update() {
         if (Input.GetMouseButton(0)) {
             if(pointer != v_null) {
@@ -173,6 +213,15 @@ public class Map : MonoBehaviour
             //End of swipe
             pointer.Set(-1, -1);
         }
+
+        if(!wait_pause && !connecting)
+        {
+            BeginConnecting();
+        }
+        if(!wait_pause && connecting)
+        {
+            MoveToTarget();
+        }   
     }
 
     public void Disconnect() {
@@ -200,5 +249,6 @@ public class Map : MonoBehaviour
             yield return null;
         SceneManager.LoadScene("Titlescreen");
     }
+
 
 }
