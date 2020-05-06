@@ -207,7 +207,14 @@ public class Map : MonoBehaviour
         {
             Debug.Log("Connected!");
             GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<SpriteRenderer>().enabled = true;
+            StartCoroutine(DisplayConnected());
         }
+    }
+
+    IEnumerator DisplayConnected()
+    {
+        yield return new WaitForSeconds(3f);
+        GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<SpriteRenderer>().enabled = false;
     }
 
     public void Update() {
