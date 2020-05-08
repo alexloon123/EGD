@@ -185,7 +185,6 @@ public class Map : MonoBehaviour
                 else
                 {
                     target_index = i;
-                    break;
                 }
             }
         }
@@ -234,7 +233,7 @@ public class Map : MonoBehaviour
         {
             BeginConnecting();
         }
-        if(!wait_pause && connecting)
+        else if(!wait_pause && connecting)
         {
             MoveToTarget();
         }   
