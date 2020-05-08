@@ -177,10 +177,9 @@ public class Map : MonoBehaviour
         {
             for (int i = 0; i < positions.Count; i++)
             {
-                if (my_position.Equals(positions[i]))
+                if (my_position.Equals(positions[i]) && my_name.Equals(names[i]))
                 {
                     self_index = i;
-                    continue;
                 }
                 else
                 {
@@ -193,6 +192,7 @@ public class Map : MonoBehaviour
 
     public void MoveToTarget()
     {
+        Debug.Log(self_index + " / " + target_index);
         Vector2 player_position = positions[self_index];
         Vector2 target_position = positions[target_index];
         float current_speed = conductor.getSpeed();
@@ -229,11 +229,11 @@ public class Map : MonoBehaviour
             pointer.Set(-1, -1);
         }
 
-        if(!wait_pause && !connecting)
+        if(!wait_pause && !connecting && positions.Count > 1)
         {
             BeginConnecting();
         }
-        else if(!wait_pause && connecting)
+        else if(!wait_pause && connecting && positions.Count > 1)
         {
             MoveToTarget();
         }   
