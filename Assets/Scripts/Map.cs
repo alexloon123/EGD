@@ -150,7 +150,7 @@ public class Map : MonoBehaviour
 
     public GameObject DisplayPlayer(Vector2 position) {
         GameObject temp = Instantiate(PREFAB_playerPosition, position, Quaternion.identity, this.gameObject.transform);
-        temp.GetComponent<RectTransform>().localPosition = new Vector3(position.x, position.y, 90.0f);
+        temp.GetComponent<RectTransform>().localPosition = new Vector3(position.x, position.y, 0.0F);
         return temp;
     }
 
@@ -190,6 +190,7 @@ public class Map : MonoBehaviour
         connecting = true;
     }
 
+    
     public void MoveToTarget()
     {
         Debug.Log(self_index + " / " + target_index);
@@ -197,8 +198,7 @@ public class Map : MonoBehaviour
         Vector2 target_position = positions[target_index];
         float current_speed = conductor.getSpeed();
 
-        icons[self_index].transform.position = Vector2.MoveTowards(player_position, target_position, current_speed * Time.deltaTime);
-        icons[self_index].transform.position = new Vector3(icons[self_index].transform.position.x, icons[self_index].transform.position.y, 0.0f);
+        icons[self_index].GetComponent<RectTransform>().localPosition = new Vector3(Mathf.Lerp(icons[self_index].GetComponent<RectTransform>().localPosition.x, icons[target_index].GetComponent<RectTransform>().localPosition.x, current_speed * Time.deltaTime), Mathf.Lerp(icons[self_index].GetComponent<RectTransform>().localPosition.y, icons[target_index].GetComponent<RectTransform>().localPosition.y, current_speed * Time.deltaTime), 0.0f);
 
         if(Mathf.Abs(positions[self_index].x - positions[target_index].x) <= connectedErrorMargin &&
             Mathf.Abs(positions[self_index].y - positions[target_index].y) <= connectedErrorMargin)
@@ -219,7 +219,8 @@ public class Map : MonoBehaviour
     public void Update() {
         for(int i = 0; i < icons.Count; i++)
         {
-            Debug.Log("name: " + names[i] + " pos: " + icons[i].transform.position.ToString());
+            icons[i].GetComponent<RectTransform>().transform.position.Set(icons[i].GetComponent<RectTransform>().transform.position.x, icons[i].GetComponent<RectTransform>().transform.position.y, 0.0f);
+            Debug.Log("name: " + names[i] + " pos: " + icons[i].GetComponent<RectTransform>().transform.position.ToString());
         }
         if (Input.GetMouseButton(0)) {
             if(pointer != v_null) {
