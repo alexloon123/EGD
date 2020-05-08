@@ -95,7 +95,7 @@ public class Map : MonoBehaviour
             Vector2 position = (Vector2)data[0];
             string nickname = (string)data[1];
             //Convert position to map coords
-            
+
             //Add new player to the data set
             positions.Add(position);
             names.Add(nickname);
@@ -104,17 +104,17 @@ public class Map : MonoBehaviour
             PlayerCheck();
             disp.QueueMsg(nickname + " has connected!");
 
-                //Prepare PUN event
-                byte b = 2;
-                object[] content = new object[] { my_position, my_name };
-                RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-                SendOptions sendOptions = new SendOptions { Reliability = true };
-                // Send new player data to other clients
-                Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
-            
+            //Prepare PUN event
+            byte b = 2;
+            object[] content = new object[] { my_position, my_name };
+            RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+            SendOptions sendOptions = new SendOptions { Reliability = true };
+            // Send new player data to other clients
+            Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
+
         }
         //Old player sending data to new player
-        else if(obj.Code == 2) {
+        else if (obj.Code == 2) {
             //Pull data from event
             object[] data = (object[])obj.CustomData;
             Vector2 position = (Vector2)data[0];
@@ -130,12 +130,12 @@ public class Map : MonoBehaviour
             disp.QueueMsg(nickname + " has connected!");
         }
         //client disconnecting
-        else if(obj.Code == 3) {
+        else if (obj.Code == 3) {
             object[] data = (object[])obj.CustomData;
             string new_name = (string)data[0];
             disp.QueueMsg(new_name + " has disconnected!");
             for (int j = 0; j < positions.Count; j++) {
-                if(names[j] == new_name) {
+                if (names[j] == new_name) {
                     positions.RemoveAt(j);
                     names.RemoveAt(j);
                     GameObject temp = icons[j];
@@ -145,7 +145,19 @@ public class Map : MonoBehaviour
             }
             PlayerCheck();
         }
-        
+        //updating an existing icon
+        else if (obj.Code == 4) {
+            //Pull data from event
+            object[] data = (object[])obj.CustomData;
+            Vector2 position = (Vector2)data[0];
+            string nickname = (string)data[1];
+            for (int j = 0; j < positions.Count; j++) {
+                if (names[j] == nickname) {
+                    positions[j] = position;
+                    icons[j].GetComponent<RectTransform>().localPosition = new Vector3(position.x, position.y, 0.0f);
+                }
+            }
+        }
     }
 
     public GameObject DisplayPlayer(Vector2 position) {
@@ -198,9 +210,18 @@ public class Map : MonoBehaviour
         Vector2 target_position = positions[target_index];
         float current_speed = conductor.getSpeed() / 10;
 
-        icons[self_index].GetComponent<RectTransform>().localPosition = new Vector3(Mathf.Lerp(icons[self_index].GetComponent<RectTransform>().localPosition.x, icons[target_index].GetComponent<RectTransform>().localPosition.x, current_speed * Time.deltaTime), Mathf.Lerp(icons[self_index].GetComponent<RectTransform>().localPosition.y, icons[target_index].GetComponent<RectTransform>().localPosition.y, current_speed * Time.deltaTime), 0.0f);
+        positions[self_index] = new Vector2(Mathf.Lerp(icons[self_index].GetComponent<RectTransform>().localPosition.x, icons[target_index].GetComponent<RectTransform>().localPosition.x, current_speed * Time.deltaTime), Mathf.Lerp(icons[self_index].GetComponent<RectTransform>().localPosition.y, icons[target_index].GetComponent<RectTransform>().localPosition.y, current_speed * Time.deltaTime));
+        icons[self_index].GetComponent<RectTransform>().localPosition = new Vector3(positions[self_index].x, positions[self_index].y, 0.0f);
 
-        if(Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.x - icons[target_index].GetComponent<RectTransform>().localPosition.x) <= connectedErrorMargin &&
+        //Prepare PUN event
+        byte b = 4;
+        object[] content = new object[] { positions[self_index], names[self_index] };
+        RaiseEventOptions eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+        SendOptions sendOptions = new SendOptions { Reliability = true };
+        // Send new player data to other clients
+        Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
+
+        if (Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.x - icons[target_index].GetComponent<RectTransform>().localPosition.x) <= connectedErrorMargin &&
             Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.y - icons[target_index].GetComponent<RectTransform>().localPosition.y) <= connectedErrorMargin)
         {
             Debug.Log("Connected!");
