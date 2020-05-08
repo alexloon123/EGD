@@ -18,7 +18,7 @@ public class Map : MonoBehaviour
     public bool connecting = false;
     int target_index = -1;
     int self_index = -1;
-    public float connectedErrorMargin = 10.0f;
+    public float connectedErrorMargin = 30.0f;
 
     public Conductor conductor;
 
@@ -221,8 +221,10 @@ public class Map : MonoBehaviour
         // Send new player data to other clients
         Photon.Pun.PhotonNetwork.RaiseEvent(b, content, eventOptions, sendOptions);
 
-        if (Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.x - icons[target_index].GetComponent<RectTransform>().localPosition.x) <= connectedErrorMargin &&
-            Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.y - icons[target_index].GetComponent<RectTransform>().localPosition.y) <= connectedErrorMargin)
+        float x_difference = Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.x - icons[target_index].GetComponent<RectTransform>().localPosition.x);
+        float y_difference = Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.y - icons[target_index].GetComponent<RectTransform>().localPosition.y);
+
+        if (x_difference <= connectedErrorMargin && y_difference <= connectedErrorMargin)
         {
             Debug.Log("Connected!");
             GameObject.FindGameObjectWithTag("ConnectedDisplay").gameObject.transform.position = positions[self_index];
@@ -238,11 +240,13 @@ public class Map : MonoBehaviour
     }
 
     public void Update() {
+        /*
         for(int i = 0; i < icons.Count; i++)
         {
             icons[i].GetComponent<RectTransform>().transform.position.Set(icons[i].GetComponent<RectTransform>().transform.position.x, icons[i].GetComponent<RectTransform>().transform.position.y, 0.0f);
             Debug.Log("name: " + names[i] + " pos: " + icons[i].GetComponent<RectTransform>().transform.position.ToString());
         }
+        */
         if (Input.GetMouseButton(0)) {
             if(pointer != v_null) {
                 Vector2 diff = new Vector2(Input.mousePosition.x - pointer.x, Input.mousePosition.y - pointer.y);
