@@ -224,6 +224,8 @@ public class Map : MonoBehaviour
         float x_difference = Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.x - icons[target_index].GetComponent<RectTransform>().localPosition.x);
         float y_difference = Mathf.Abs(icons[self_index].GetComponent<RectTransform>().localPosition.y - icons[target_index].GetComponent<RectTransform>().localPosition.y);
 
+        Debug.Log("x: " + x_difference + " y: " + y_difference);   
+
         if (x_difference <= connectedErrorMargin && y_difference <= connectedErrorMargin)
         {
             Debug.Log("Connected!");
