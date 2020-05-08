@@ -159,11 +159,7 @@ public class Conductor : MonoBehaviour
                                 GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueGoodMsg();
                             }
                         }
-                        speed += (1.0f - beat) / 2;
-                        if (speed > 10f)
-                        {
-                            speed = 10f;
-                        }
+                        speed += (beatErrorMargin - beat);
                     }
                     //BEAT IS NOT HIT
                     else
@@ -179,7 +175,7 @@ public class Conductor : MonoBehaviour
                                 GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueBadMsg();
                             }
                         }
-                        speed = beat;
+                        speed = 0.0f;
                     }
                     leftBeatsHit[currentLeftBeat] = true;
                 }
@@ -210,11 +206,7 @@ public class Conductor : MonoBehaviour
                             }
                             
                         }
-                        speed += (1.0f - beat) / 2;
-                        if(speed > 10f)
-                        {
-                            speed = 10f;
-                        }
+                        speed += (beatErrorMargin - beat);
                     }
                     //BEAT IS NOT HIT
                     else
@@ -230,7 +222,7 @@ public class Conductor : MonoBehaviour
                                 GameObject.FindGameObjectWithTag("TextDisplay").GetComponent<TextDisplay>().QueueBadMsg();
                             }
                         }
-                        speed = beat;
+                        speed = 0.0f;
                     }
                     rightBeatsHit[currentRightBeat] = true;
                 }
