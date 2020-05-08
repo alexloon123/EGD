@@ -150,7 +150,7 @@ public class Map : MonoBehaviour
 
     public GameObject DisplayPlayer(Vector2 position) {
         GameObject temp = Instantiate(PREFAB_playerPosition, position, Quaternion.identity, this.gameObject.transform);
-        temp.GetComponent<RectTransform>().localPosition = position;
+        temp.GetComponent<RectTransform>().localPosition = new Vector3(position.x, position.y, 90.0f);
         return temp;
     }
 
@@ -198,8 +198,7 @@ public class Map : MonoBehaviour
         float current_speed = conductor.getSpeed();
 
         icons[self_index].transform.position = Vector2.MoveTowards(player_position, target_position, current_speed * Time.deltaTime);
-        positions[self_index] = player_position;
-        positions[target_index] = target_position;
+        icons[self_index].transform.position = new Vector3(icons[self_index].transform.position.x, icons[self_index].transform.position.y, 0.0f);
 
         if(Mathf.Abs(positions[self_index].x - positions[target_index].x) <= connectedErrorMargin &&
             Mathf.Abs(positions[self_index].y - positions[target_index].y) <= connectedErrorMargin)
@@ -218,6 +217,10 @@ public class Map : MonoBehaviour
     }
 
     public void Update() {
+        for(int i = 0; i < icons.Count; i++)
+        {
+            Debug.Log("name: " + names[i] + " pos: " + icons[i].transform.position.ToString());
+        }
         if (Input.GetMouseButton(0)) {
             if(pointer != v_null) {
                 Vector2 diff = new Vector2(Input.mousePosition.x - pointer.x, Input.mousePosition.y - pointer.y);
@@ -228,13 +231,14 @@ public class Map : MonoBehaviour
             //End of swipe
             pointer.Set(-1, -1);
         }
-
         if(!wait_pause && !connecting && positions.Count > 1)
         {
+            Debug.Log("Begin connecting!");
             BeginConnecting();
         }
         else if(!wait_pause && connecting && positions.Count > 1)
         {
+            Debug.Log("Start moving!");
             MoveToTarget();
         }   
     }
