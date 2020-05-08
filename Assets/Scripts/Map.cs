@@ -229,7 +229,7 @@ public class Map : MonoBehaviour
         if (x_difference <= connectedErrorMargin && y_difference <= connectedErrorMargin)
         {
             Debug.Log("Connected!");
-            GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<RectTransform>().localPosition = new Vector3(icons[self_index].GetComponent<RectTransform>().localPosition.x, icons[self_index].GetComponent<RectTransform>().localPosition.y + 10, -0.01f);
+            GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<RectTransform>().localPosition = new Vector3(icons[self_index].GetComponent<RectTransform>().localPosition.x, icons[self_index].GetComponent<RectTransform>().localPosition.y + 60, -0.01f);
             GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<SpriteRenderer>().enabled = true;
         }
     }
