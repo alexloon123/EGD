@@ -227,7 +227,7 @@ public class Map : MonoBehaviour
         if (x_difference <= connectedErrorMargin && y_difference <= connectedErrorMargin)
         {
             Debug.Log("Connected!");
-            GameObject.FindGameObjectWithTag("ConnectedDisplay").gameObject.transform.position = positions[self_index];
+            GameObject.FindGameObjectWithTag("ConnectedDisplay").gameObject.transform.position = icons[self_index].GetComponent<RectTransform>().localPosition;
             GameObject.FindGameObjectWithTag("ConnectedDisplay").GetComponent<SpriteRenderer>().enabled = true;
             StartCoroutine(DisplayConnected());
         }
