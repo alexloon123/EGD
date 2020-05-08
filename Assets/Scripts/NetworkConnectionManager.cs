@@ -34,7 +34,7 @@ public class NetworkConnectionManager : MonoBehaviourPunCallbacks
         PhotonNetwork.OfflineMode = false;
         
         PhotonNetwork.AutomaticallySyncScene = true;
-        PhotonNetwork.GameVersion = "0.5";
+        PhotonNetwork.GameVersion = "0.6";
         PhotonNetwork.ConnectUsingSettings();
     }
 
